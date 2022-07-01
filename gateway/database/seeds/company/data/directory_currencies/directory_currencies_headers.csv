@@ -1,0 +1,7 @@
+id,title_ru,title_ua,is_sortable,is_visible,value
+1,Наименование,Назва,1,1,title
+2,Символ,Символ,1,1,symbol
+3,Цифровой код,Цифровий код,1,1,digital_code
+4,Символьный код,Символьний код,1,1,symbol_code
+5,Курс,Курс,1,1,exchange_rate
+6,Кратность,Кратність,1,1,multiple

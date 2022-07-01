@@ -1,0 +1,5 @@
+id,title_ru,title_ua,is_sortable,is_visible,value
+1,Пользователь,Користувач,1,1,full_name
+2,Статус сотрудника,Статус співробітника,1,1,is_not_active
+3,Должность,Посада,1,1,position
+4,Отдел,Відділ,1,1,department

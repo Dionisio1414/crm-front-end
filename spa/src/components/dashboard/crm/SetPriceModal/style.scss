@@ -1,0 +1,123 @@
+@import "../../../../sass/mixins";
+
+.grid-table-wrapper {
+  border: 1px solid #E3F0FF;
+  box-sizing: border-box;
+  border-radius: 10px;
+  margin-top: 10px;
+
+  .tCh {
+    margin-bottom: 0;
+
+    .checkbox-label {
+      display: flex;
+    }
+  }
+
+  &.firstTable {
+    .tbody {
+      max-height: 200px;
+      overflow-y: auto;
+      @include custom-scroll-bar();
+    }
+
+    .thead, .tr {
+      display: grid;
+      grid-template-columns: 40px 40px 120px 1fr 1fr;
+      grid-template-rows: 48px;
+      border-bottom: 1px solid #9DCCFF;
+
+      .th {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        font-weight: 550;
+        font-size: 15px;
+        line-height: 15px;
+        text-transform: capitalize;
+        color: #5893D4;
+        padding: 10px;
+        box-sizing: border-box;
+
+        &.last {
+          justify-content: flex-end;
+          padding-right: 45px;
+        }
+      }
+
+      .td {
+        @extend .th;
+        font-weight: normal;
+        color: #7E7E7E;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+    }
+
+    .tr {
+      border-bottom: 1px solid #E3F0FF;
+    }
+  }
+
+  &.secondTable {
+      .thead {
+        grid-template-rows: 48px;
+
+        &_top {
+          display: grid;
+          grid-template-columns: 60% 40%;
+
+          .item {
+            display: grid;
+            grid-auto-rows: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(130px, 130px));
+            .th {
+              display: flex;
+              align-items: center;
+              font-weight: 550;
+              font-size: 15px;
+              line-height: 15px;
+              text-align: center;
+              color: #7E7E7E;
+            }
+
+          }
+        }
+      }
+
+    .tr {
+      display: grid;
+      grid-template-columns: 40px 40px 120px 1fr 1fr;
+      grid-template-rows: 48px;
+      border-bottom: 1px solid #9DCCFF;
+
+      .th {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        font-weight: 550;
+        font-size: 15px;
+        line-height: 15px;
+        text-transform: capitalize;
+        color: #5893D4;
+        padding: 10px;
+        box-sizing: border-box;
+
+        &.last {
+          justify-content: flex-end;
+          padding-right: 45px;
+        }
+      }
+
+      .td {
+        @extend .th;
+        font-weight: normal;
+        color: #7E7E7E;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+    }
+  }
+}

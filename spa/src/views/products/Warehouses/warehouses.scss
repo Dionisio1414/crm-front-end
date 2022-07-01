@@ -1,0 +1,68 @@
+.warehouse.page.with-tabs.with-small-nav .card.card-table {
+  width: 100% !important;
+  overflow-y: hidden;
+}
+
+.wareHouseMenu {
+  overflow-y: auto;
+  position: relative;
+
+  &.wPreloader .wareHouse {
+    opacity: .4;
+    pointer-events: none;
+  }
+}
+
+.slide-fade-enter-active {
+  transition: all .5s ease;
+}
+
+.slide-fade-enter, .slide-fade-leave-to {
+  transform: translateX(-100%);
+}
+
+.tree-menu {
+  padding: 20px;
+}
+
+.warehouse.page.with-tabs {
+  .page-header .actions-section {
+    width: calc(100% - 260px);
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 20px;
+
+    .actions-buttons {
+      margin-left: inherit;
+
+      .v-btn {
+        margin-left: 10px;
+        width: inherit;
+      }
+    }
+  }
+
+  .card-grid .card.list-item {
+    width: 100%;
+    max-width: 260px;
+  }
+
+  &.with-small-nav .card {
+    margin-left: 0;
+    overflow-y: inherit;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #7CE1A4;
+}

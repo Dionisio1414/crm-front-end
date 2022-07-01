@@ -1,0 +1,9 @@
+id,title_ru,title_ua,is_sortable,is_visible,value
+1,Контактное лицо,Контактна особа,1,1,individual
+2,Контрагент,Контрагент,1,1,counterparty
+3,Вид документов,Вид документів,1,1,document_type
+4,Серия/Номер,Серія/Номер,1,1,document_number
+5,Дата выдачи,Дата Видачі,1,1,document_issued_date
+6,Срок действия,Термін дії,1,1,document_validity_date
+7,Кем выдан,Ким виданий,1,1,document_issued
+8,Дата добавления,Дата додавання,1,0,date_create_document

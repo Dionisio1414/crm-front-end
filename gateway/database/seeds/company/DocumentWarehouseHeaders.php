@@ -1,0 +1,29 @@
+<?php
+
+namespace Database\Seeders\Company;
+
+use Database\Seeders\Traits\SeederCore;
+use Illuminate\Database\Seeder;
+use App\Core\Helpers\Csv\ImportCsv;
+use Illuminate\Support\Facades\DB;
+
+class DocumentWarehouseHeaders extends Seeder
+{
+    use SeederCore;
+
+    protected const DOCUMENT_WAREHOUSE_HEADERS_CSV = '/database/seeds/company/data/document_warehouses_headers.csv';
+
+    protected const TABLE_HEADER = 'document_warehouses_headers';
+
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run($is_edit = false)
+    {
+        $headers = ImportCsv::_getDataJsonTitle(base_path() . self::DOCUMENT_WAREHOUSE_HEADERS_CSV);
+
+        $this->headers($headers, self::TABLE_HEADER, $is_edit);
+    }
+}

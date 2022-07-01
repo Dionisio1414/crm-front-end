@@ -1,0 +1,16 @@
+id,title_ru,title_ua,is_sortable,is_visible,value
+1,ID,ID,1,1,id
+2,Договор,Договір,1,1,title
+3,№ регистрации,№ реєстрації,1,0,registration_number
+4,Дата,Дата,1,1,contract_date
+5,Контрагент,Контрагент,1,1,counterparty
+6,Вид договора,Вид договору,1,1,type_contract
+7,Валюта,Валюта,1,1,currency
+8,Организация,Організація,1,1,organization
+9,Вид цены,Вид ціни,1,1,price_type
+10,Скидки/Наценки,Знижки/Націнки,1,0,price_markup
+11,Срок оплаты,Термін оплати,1,0,due_date
+12,Период действия,Період дії,1,0,period_date
+13,Подписан,Підписаний,1,0,is_contract_signed
+14,Статус,Статус,1,1,status
+15,Комментарий,Коментар,1,0,description

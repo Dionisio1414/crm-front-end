@@ -1,0 +1,120 @@
+.modal-container
+    &-filter
+        .dialog
+            &-header
+                justify-content: normal
+                padding: 0 20px
+                &-actions
+                    margin-left: auto
+                    align-items: flex-start
+                    .base-button
+                        &:not(:last-of-type)
+                            margin-right: 10px
+                        &.close
+                            padding: 0
+                            margin-top: 7px
+                            margin-left: 7px
+                .header
+                    &-text
+                        font-size: 15px
+                        margin-right: 28px
+                    &-tablist
+                        .tablist
+                            display: flex
+                            align-items: center
+                            &-item
+                                font-size: 12px
+                                font-weight: 500
+                                line-height: 1
+                                text-transform: uppercase
+                                color: #9DCCFF
+                                cursor: pointer
+                                transition: .25s ease-in-out
+                                &:not(:last-child)
+                                    margin-right: 20px
+                                &--active,
+                                &:hover
+                                    color: #fff
+            &-body
+                position: relative
+                padding: 20px 20px 55px 20px
+                &::before
+                    content: ""
+                    background: linear-gradient(180deg, rgba(255, 255, 255, 0.6194852941176471) 0%, rgba(255, 255, 255, 0.8071603641456583) 21%, rgba(255, 255, 255, 0.9556197478991597) 49%, rgba(255, 255, 255, 1) 100%)
+                    position: absolute
+                    left: 50%
+                    bottom: 30px
+                    transform: translateX(-50%)
+                    width: calc(100% - 42px)
+                    height: 43px
+                    z-index: 2
+                    pointer-events: none
+                &-content
+                    overflow-x: hidden
+                    overflow-y: auto
+                    min-height: 463px
+                    max-height: 463px
+                    &::-webkit-scrollbar
+                        width: 2px
+                    &::-webkit-scrollbar-track
+                        background: transparent
+                    &::-webkit-scrollbar-thumb
+                        background: #9DCCFF
+                    .form
+                        padding: 0 20px
+                        &-field
+                            &-range
+                                display: flex
+                                align-items: center
+                                .divider
+                                    width: 18px
+                                    height: 1px
+                                    background: #7E7E7E
+                                    margin: 0 5px
+                        .row
+                            padding-bottom: 20px
+                            &:not(:last-child)
+                                border-bottom: 1px solid #E3F0FF
+                                margin-bottom: 23px
+                            .col
+                                padding: 0
+                        .label-title
+                            margin-bottom: 15px
+                            + .select-wrap
+                                margin-top: -10px
+                            + .form-field-period
+                                margin-top: -8px
+                        .select-wrap
+                            max-width: 250px
+                        .slider-wrapper
+                            max-width: 170px
+                        .list
+                            border-radius: 10px
+                            border: 1px solid #E3F0FF
+                            padding: 15px!important
+                            overflow-x: hidden
+                            overflow-y: auto
+                            max-height: 190px
+                            max-width: 238px
+                            &::-webkit-scrollbar
+                                width: 2px
+                            &::-webkit-scrollbar-track
+                                background: transparent
+                            &::-webkit-scrollbar-thumb
+                                background: #9DCCFF
+                            &-header
+                                position: relative
+                                padding-bottom: 10px
+                                margin-bottom: 5px
+                                &::before
+                                    content: ""
+                                    background: #E3F0FF
+                                    position: absolute
+                                    bottom: 0
+                                    left: 0
+                                    height: 1px 
+                                    width: 149px
+                            &-body
+                                &-item
+                                    &:not(:last-child)
+                                        margin-bottom: 10px

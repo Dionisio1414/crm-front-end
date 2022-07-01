@@ -1,0 +1,183 @@
+<?php
+
+namespace App\Services\Shemas\Suppliers;
+
+/**
+ * @OA\Schema(
+ *     title="SupplierParams",
+ *     description="SupplierParams Shemas",
+ *     @OA\Xml(
+ *         name="SupplierParams"
+ *     )
+ * )
+ * @OA\Property(
+ *     property="title_supplier",
+ *     title="title_supplier",
+ *     example="Title Supplier",
+ *     type="string"
+ * )
+ * @OA\Property(
+ *     property="title_company",
+ *     title="title_company",
+ *     example="Title",
+ *     type="string"
+ * )
+ * @OA\Property(
+ *     property="title_supplier_middle_name",
+ *     title="title_supplier_middle_name",
+ *     example="Middle Name",
+ *     type="string"
+ * )
+ * @OA\Property(
+ *     property="title_supplier_last_name",
+ *     title="title_supplier_last_name",
+ *     example="Last Name",
+ *     type="string"
+ * )
+ * @OA\Property(
+ *     property="title_supplier_first_name",
+ *     title="title_supplier_first_name",
+ *     example="First Name",
+ *     type="string"
+ * )
+ * @OA\Property(
+ *     property="partner_type_id",
+ *     title="partner_type_id",
+ *     example=1,
+ *     type="int"
+ * )
+ * @OA\Property(
+ *     property="group_id",
+ *     title="group_id",
+ *     example=1,
+ *     type="int"
+ * )
+ * @OA\Property(
+ *     property="is_legal_equal_actual_address",
+ *     title="is_legal_equal_actual_address",
+ *     example=false,
+ *     type="boolean"
+ * )
+ * @OA\Property(
+ *     property="is_delivery_equal_actual_address",
+ *     title="is_delivery_equal_actual_address",
+ *     example=true,
+ *     type="boolean"
+ * )
+ * @OA\Property(
+ *     property="date_of_birth",
+ *     title="date_of_birth",
+ *     example="2020-12-01",
+ *     type="string"
+ * )
+ * @OA\Property(
+ *     property="sex_id",
+ *     title="sex_id",
+ *     example=1,
+ *     type="int"
+ * )
+ * @OA\Property(
+ *     property="is_foreign_company",
+ *     title="is_foreign_company",
+ *     example=false,
+ *     type="boolean"
+ * )
+ * @OA\Property(
+ *     property="currency_id",
+ *     title="currency_id",
+ *     example=1,
+ *     type="int"
+ * )
+ * @OA\Property(
+ *     property="legal_address_street",
+ *     title="legal_address_street",
+ *     example="Street",
+ *     type="string"
+ * )
+ * @OA\Property(
+ *     property="legal_address_number_housing",
+ *     title="legal_address_number_housing",
+ *     example="Number Housing",
+ *     type="string"
+ * )
+ * @OA\Property(
+ *     property="phone",
+ *     title="phone",
+ *     example="+380501111111",
+ *     type="string"
+ * )
+ * @OA\Property(
+ *     property="email",
+ *     title="email",
+ *     example="test@example.com",
+ *     type="string"
+ * )
+ * @OA\Property(
+ *     property="partner_inn",
+ *     title="partner_inn",
+ *     example=312312312,
+ *     type="int"
+ * )
+ * @OA\Property(
+ *     property="partner_edrpou",
+ *     title="partner_edrpou",
+ *     example="43232423",
+ *     type="string"
+ * )
+ * @OA\Property(
+ *     property="legal_address_country_id",
+ *     title="legal_address_country_id",
+ *     example=1,
+ *     type="int"
+ * )
+ * @OA\Property(
+ *     property="legal_address_region_id",
+ *     title="legal_address_region_id",
+ *     example=1,
+ *     type="int"
+ * )
+ * @OA\Property(
+ *     property="legal_city_id",
+ *     title="legal_city_id",
+ *     example=1,
+ *     type="int"
+ * )
+ * @OA\Property(
+ *     property="manager_id",
+ *     title="manager_id",
+ *     example=1,
+ *     type="int"
+ * )
+ * @OA\Property(
+ *     property="actual_address",
+ *     title="Actual Address",
+ *     type="array",
+ *     collectionFormat="multi",
+ *     @OA\Items(
+ *       ref="#/components/schemas/SupplierAdress"
+ *     )
+ * )
+ * @OA\Property(
+ *     property="delivery_address",
+ *     title="Delivery Address",
+ *     type="array",
+ *     collectionFormat="multi",
+ *     @OA\Items(
+ *       ref="#/components/schemas/SupplierAdress"
+ *     )
+ * )
+ * @OA\Property(
+ *     property="contacts",
+ *     title="Contacts",
+ *     type="array",
+ *     collectionFormat="multi",
+ *     @OA\Items(
+ *       ref="#/components/schemas/SupplierContacts"
+ *     )
+ * )
+ */
+
+class SupplierParams
+{
+
+}

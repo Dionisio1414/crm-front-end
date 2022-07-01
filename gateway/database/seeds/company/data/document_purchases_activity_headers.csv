@@ -1,0 +1,6 @@
+id,title_ru,title_ua,is_sortable,is_visible,value
+1,Дата,Дата,1,1,date
+2,Статус,Статус,1,1,status
+3,Номер,Номер,1,1,convert_id
+4,Поставщик,Постачальник,1,1,user
+5,Склад,Склад,1,1,warehouse

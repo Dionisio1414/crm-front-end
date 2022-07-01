@@ -1,0 +1,266 @@
+.modal-container
+    &-files
+        .dialog
+            &-header
+                &-actions
+                    .base-button
+                        padding: 0
+                        &:not(:last-child)
+                            margin-right: 20px
+
+            &-body
+                .upload
+                    &-header
+                        margin-bottom: 25px
+                    &-main
+                        position: relative
+                        border: 1px dashed #E3F0FF
+                        border-radius: 10px
+                        min-height: 405px
+                        height: 100%
+                    &-label
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        position: absolute
+                        top: 0
+                        left: 0
+                        right: 0
+                        bottom: 0
+                        width: 100%
+                        height: 100%
+                    &-field
+                        position: absolute
+                        top: 0
+                        left: 0
+                        right: 0
+                        opacity: 0
+                        width: 100%
+                        height: 100%
+                    &-title,
+                    &-title-success
+                        font-size: 15px
+                        font-weight: normal
+                        text-align: center
+                        max-width: 362px
+                        margin: 0 auto 20px auto
+                        color: #5893D4
+                    &-title
+                        .gray-text
+                            color: #BABABA
+                        .divider
+                            display: block
+                    &-title-success
+                        strong
+                            display: block
+                            font-weight: 600
+                            word-break: break-word
+                    &-title-error
+                        font-size: 15px
+                        line-height: 1
+                        margin-bottom: 10px
+                        text-align: center
+                        max-width: 362px
+                        color: #FF9D2B
+                    &-actions
+                        position: relative
+                        text-align: center
+                        z-index: 2
+
+                .wrapper
+                    .base-button
+                        padding: 10px 13px
+                        min-width: 160px
+                    &-header
+                        margin-bottom: 20px
+                        .col
+                            padding-top: 0
+                            padding-bottom: 0
+                        &-left,
+                        &-right
+                            display: flex
+                            align-items: center
+                        &-left
+                            .base-button
+                                margin-left: auto
+                        &-right
+                            .list
+                                &-title
+                                    font-size: 13px
+                                    font-weight: bold
+                                    line-height: 1
+                                    letter-spacing: .02em
+                                    margin-right: auto
+                                    text-transform: uppercase
+                                    color: #317CCE
+                                &-search
+                                    margin-right: 20px
+                                    .search-block
+                                        input
+                                            border: 1px solid #E3F0FF
+                                            min-width: 240px
+                    &-main
+                        .list
+                            &-main
+                                &-error
+                                    display: flex
+                                    align-items: center
+                                    justify-content: center
+                                    min-height: 350px
+                                .lists
+                                    display: flex
+                                    flex-wrap: wrap
+                                    align-content: flex-start
+                                    padding-right: 10px
+                                    margin: 0 -5px
+                                    overflow-x: hidden
+                                    overflow-y: auto
+                                    min-height: 365px
+                                    max-height: 365px
+                                    &::-webkit-scrollbar
+                                        width: 2px
+                                    &::-webkit-scrollbar-track
+                                        background: transparent
+                                    &::-webkit-scrollbar-thumb
+                                        background: #9DCCFF
+                                    &-item
+                                        position: relative
+                                        background-color: #F4F9FF
+                                        background-size: contain
+                                        background-position: center center
+                                        border-radius: 10px
+                                        height: 93px
+                                        flex: 0 1 calc(25% - 10px)
+                                        margin-left: 5px
+                                        margin-right: 5px
+                                        &:not(:nth-last-of-type(-n+4))
+                                            margin-bottom: 35px
+                                        &--loader
+                                            opacity: .5
+                                        &--disabled
+                                            opacity: .5
+                                            pointer-events: none
+                                    &-label
+                                        display: block
+                                        width: 20px
+                                        height: 20px
+                                        cursor: pointer
+                                    &-title
+                                        position: absolute
+                                        top: calc(100% + 2px)
+                                        font-size: 12px
+                                        text-align: center
+                                        width: 100%
+                                        overflow: hidden
+                                        text-overflow: ellipsis
+                                        white-space: nowrap
+                                        color: #9DCCFF
+                                        cursor: pointer
+                                    &-actions
+                                        display: flex
+                                        align-items: center
+                                        justify-content: space-between
+                                        position: absolute
+                                        top: 0
+                                        left: 0
+                                        right: 0
+                                        padding: 10px
+                                        .field
+                                            display: none
+                                            &:checked
+                                                + .lists-radio
+                                                    &::after
+                                                        opacity: 1
+                                                + .lists-checkbox
+                                                    &::after
+                                                        opacity: 1
+                                    &-radio,
+                                    &-checkbox
+                                        position: relative
+                                        width: 16px
+                                        height: 16px
+                                        &::before
+                                            content: ""
+                                            background: #fff
+                                            position: absolute
+                                            top: 0
+                                            border: 1px solid #9DCCFF
+                                            width: 16px
+                                            height: 16px
+                                        &::after
+                                            content: ""
+                                            background: #5893D4
+                                            position: absolute
+                                            top: 50%
+                                            left: 50%
+                                            transform: translate(-50%, -50%)
+                                            width: 8px
+                                            height: 8px
+                                            opacity: 0
+                                            transform: opacity .25s ease-in-out
+                                    &-radio
+                                        &::before,
+                                        &::after
+                                            border-radius: 50%
+                                    &-error
+                                        text-align: center
+                                        .picture
+                                            margin-bottom: 15px
+                                            img
+                                                display: block
+                                                height: auto
+                                                max-width: 100%
+                                                object-fit: cover
+                                        .text
+                                            font-size: 20px
+                                            color: #BBDBFE
+
+                .cropper
+                    &-container
+                        border: 1px solid #E3F0FF
+                        border-radius: 10px
+                        min-height: 405px
+                        height: 100%
+                        padding: 20px
+                    &-wrapper
+                        width: 100%
+                        height: 100%
+                        max-width: 532px
+                        max-height: 288px
+                        margin-bottom: 40px
+                    &-settings
+                        display: flex
+                        align-items: center
+                        justify-content: space-between
+                        &-range
+                            flex: 0 1 calc(33.333% - 15px)
+                            .range-label
+                                font-size: 14px
+                                font-weight: 400
+                                line-height: 1
+                                color: #5893D4
+                            .v-slider
+                                &--horizontal
+                                    margin: 0
+                                &__thumb
+                                    transform: translateY(-50%) !important
+                                    height: 13px
+                                    width: 13px
+                                    z-index: 1
+                                    border: 2px solid  #E3F0FF!important
+                                &__thumb-label
+                                    background: none !important
+                                    border: none !important
+                                    color: #5893D4
+                                    transform: translateX(-50%) !important
+                                    font-size: 14px
+                                    line-height: 14px
+                                    &-container
+                                        display: none
+                                div
+                                    transform: none
+
+            &-footer
+                padding: 0 30px 50px 30px!important
+                .form-actions
+                    padding-top: 0

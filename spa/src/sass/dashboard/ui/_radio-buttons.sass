@@ -1,0 +1,72 @@
+.radio-group
+  margin-bottom: 30px
+
+.radio-button
+  label
+    display: block
+    font-weight: normal
+    cursor: pointer
+    padding-top: 25px
+
+    input[type="radio"]
+      display: none
+
+      &:checked
+        + .radio-button-text
+          &::after
+            opacity: 1
+
+  &_desc
+    background: #F4F9FF
+    border-radius: 10px
+    padding: 11px 30px
+    width: 300px
+    display: flex
+    justify-content: space-between
+    span
+      margin-right: 50px
+      &:last-child
+        margin-right: 0
+    svg
+        margin: 0 10px
+  &-text
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: space-between
+    min-width: 16px
+    min-height: 16px
+    padding-left: 30px
+    color: #7E7E7E
+    text-transform: none
+
+    .text
+      font-size: 15px
+      line-height: 20px
+      padding-left: 25px
+      padding-right: 56px
+
+    &::before
+      content: ""
+      position: absolute
+      left: 0
+      top: 50%
+      transform: translateY(-50%)
+      border: 1px solid #7CE1A4
+      width: 16px
+      height: 16px
+      border-radius: 50%
+
+
+    &::after
+      content: ""
+      background: #7CE1A4
+      position: absolute
+      top: 50%
+      left: 4px
+      border-radius: 50%
+      transform: translateY(-50%)
+      width: 8px
+      height: 8px
+      opacity: 0
+      transition: opacity .25s ease-in-out

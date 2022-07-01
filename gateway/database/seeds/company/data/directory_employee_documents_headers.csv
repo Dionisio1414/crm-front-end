@@ -1,0 +1,8 @@
+id,title_ru,title_ua,is_sortable,is_visible,value
+1,Сотрудник,Співробітник,1,1,employee
+2,Вид документа,Вид документа,1,1,document_type
+3,Серия/Номер,Серія/Номер,1,1,document_number
+4,Дата выдачи,Дата видачі,1,1,document_issued_date
+5,Срок действия,Термін дії,1,1,document_validity_date
+6,Кем выдан,Ким виданий,1,1,document_issued
+7,Дата добавления,Дата додавання,1,0,date_create_document

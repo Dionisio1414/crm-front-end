@@ -1,0 +1,55 @@
+.table-modal {
+  .dialog-main {
+    padding: 30px;
+  }
+  .table-actions {
+    display: flex;
+    margin-bottom: 15px;
+    justify-content: space-between;
+    &-right {
+      display: flex;
+    }
+
+  }
+  .search-block {
+    max-width: 392px;
+
+    input {
+      border: 1px solid #9DCCFF;
+    }
+  }
+
+  .circle-btn {
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #9DCCFF;
+
+    &:hover {
+      background: #5893D4;
+    }
+  }
+  .transparent-btn {
+    height: 36px;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #9DCCFF;
+    box-sizing: border-box;
+    border-radius: 32.5652px;
+    font-weight: bold;
+    font-size: 13px;
+    color: #fff;
+    background-color: #9DCCFF;
+    transition: all .5s;
+    cursor: pointer;
+    &:hover {
+      background-color: #fff;
+      color: #9DCCFF;
+    }
+  }
+}

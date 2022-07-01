@@ -1,0 +1,23 @@
+.move-modal {
+  .category-tree-wrapper{
+    .category-tree-name {
+      color: #5893D4;
+      font-size: 16px;
+      line-height: 16px;
+    }
+    .category-tree-item{
+      .category-tree-name {
+        font-weight: 400;
+        color: #5893D4;
+        font-size: 16px;
+        line-height: 16px;
+      }
+      &:last-child {
+        .category-tree-name {
+          font-weight: 500;
+          pointer-events: none;
+        }
+      }
+    }
+  }
+}

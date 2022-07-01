@@ -1,0 +1,120 @@
+@keyframes btnSpinner 
+  0%
+    transform: rotate(0deg)
+  100%
+    transform: rotate(360deg)
+    
+.base-button
+    background: transparent
+    font-size: 13px
+    font-weight: bold
+    line-height: 1 
+    border-radius: 30px
+    padding: 13px
+    color: #fff
+    transition: .25s ease-in-out
+    > a
+        text-decoration: none
+        color: #fff!important
+    .btn-loader
+        font-size: 10px
+        margin: auto
+        text-indent: -9999em
+        width: 25px
+        height: 25px
+        border-radius: 50%
+        background: #ffffff
+        background: -moz-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 42%)
+        background: -webkit-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 42%)
+        background: -o-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 42%)
+        background: -ms-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 42%)
+        background: linear-gradient(to right, #ffffff 10%, rgba(255, 255, 255, 0) 42%)
+        position: relative
+        animation: btnSpinner 1.4s infinite linear
+        transform: translateZ(0)
+        &::before
+            content: ""
+            width: 50%
+            height: 50%
+            background: #ffffff
+            border-radius: 100% 0 0 0
+            position: absolute
+            top: 0
+            left: 0
+        &::after
+            content: ""
+            background: #5893D4
+            width: 75%
+            height: 75%
+            border-radius: 50%
+            margin: auto
+            position: absolute
+            top: 0
+            left: 0
+            bottom: 0
+            right: 0
+
+    &--blue
+        background: #5893D4
+        &:hover:not(:disabled)
+            background: #FF9F2F
+        &:disabled
+            opacity: .5
+    &--transparent
+        border: 1px solid #5893D4
+        color: #5893D4
+        &:hover:not(:disabled)
+            background: #5893D4
+            color: #fff
+        &:disabled
+            opacity: .5
+    &--accent
+        background:#FF9D2B
+        border: none 
+        color: #fff
+        &:hover:not(:disabled)
+            background: #FF951A
+        &:disabled
+            background: #FFCB8D
+    &--lighten
+        background: #9DCCFF
+        border: none
+        color: #fff
+        &:hover:not(:disabled)
+            background: #5893D4
+        &:disabled
+            opacity: .5
+    &--lighten--transparent
+        border: 1px solid #9DCCFF
+        color: #9DCCFF
+        &:hover:not(:disabled)
+            background: #9DCCFF
+            color: #fff
+        &:disabled
+            cursor: default
+            opacity: .5
+    &--white
+        background: #fff
+        border: none
+        color: #5893D4
+        &:hover:not(:disabled)
+            background: #E3F0FF
+        &:disabled
+            opacity: .5
+.button
+    &-prev
+        font-size: 15px
+        font-weight: 400
+        line-height: 1
+        color: #5893D4
+        transition: color .25s ease-in-out
+        .icon
+            fill: #5893D4
+            margin-right: 7px
+            transition: fill .25s ease-in-out
+        &:hover
+            color: #FF9F2F
+            .icon
+                fill: #FF9F2F
+        .btn-text
+            vertical-align: text-top

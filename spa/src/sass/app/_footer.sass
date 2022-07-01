@@ -1,0 +1,281 @@
+.app-footer
+  margin-top: auto
+  height: 52px
+  width: 100%
+  background-color: #9FC3E9
+  border-radius: 10px
+  color: #fff
+  display: flex
+
+input[type="checkbox"]
+  position: relative
+  width: 0
+  height: 0
+  &:disabled
+    &:after
+      display: block
+      background-color: #ddd
+    &:before
+      border: 1px solid #ddd
+  &:checked
+    &:after
+      display: block
+  &:after
+    content: ''
+    display: none
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+    position: absolute
+    width: 8px
+    height: 8px
+    background: #5893D4
+  &:before
+    content: ''
+    display: block
+    position: absolute
+    left: 0
+    top: 0
+    width: 16px
+    height: 16px
+    border: 1px solid #9DCCFF
+    box-sizing: border-box
+    background-color: #fff
+
+.bookmarks
+  margin-right: auto
+  height: 100%
+  position: relative
+
+.bookmarks-menu-wrap
+  position: absolute
+  width: 478px
+  height: 466px
+  background: #F4F9FF
+  bottom: 65px
+  left: 0
+  z-index: 5
+  border-radius: 10px
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1)
+  padding: 20px
+  padding-top: 15px
+  color: $main-dark
+  .menu-title
+    color: $main
+    display: flex
+    align-items: center
+    margin-bottom: 20px
+    .title
+      font-size: 13px !important
+      font-weight: bold
+      padding: 0
+      margin: 0
+      text-transform: uppercase
+      margin-right: 15px
+      color: $main-dark
+    .bookmarks-count
+      font-size: 13px
+      font-weight: bold
+      line-height: 2rem
+      color: $main-dark
+
+.bookmarks
+  width: 100%
+  display: flex
+  .bookmarks-menu
+    list-style: none
+    padding: 0
+    margin: 0
+    color: $main-dark
+    width: 50%
+    height: 100%
+    border-right: 1px solid #E3F0FF
+    max-height: 380px
+    padding-right: 30px
+    position: relative
+    .sub-bookmarks-menu
+      position: absolute
+      left: calc(100% + 25px)
+      top: 0px
+      > div
+        display: flex
+        align-items: center
+        margin-bottom: 20px
+        &:hover
+          cursor: pointer
+        input
+          margin-right: 12px
+        label
+          font-size: 13px
+          line-height: 1
+          &:hover
+            cursor: pointer
+    li
+      display: flex
+      align-items: center
+      width: 100%
+      padding-bottom: 9px
+      &:not(:last-child)
+        border-bottom: 1px solid #E3F0FF
+        margin-bottom: 20px
+      input
+        margin-right: 10px
+        width: 16px
+        height: 16px
+        border: 1px solid #9DCCFF !important
+        border-radius: 0px !important
+      svg, 
+      .icon
+        margin-left: auto
+        path
+          fill: #9DCCFF
+          transition: .25s ease-in-out
+      &:hover,
+      &.active
+        a
+          font-weight: 500
+          color: #317CCE
+        .icon
+          path
+            fill: #5893D4
+      .checkbox
+        margin-right: 12px
+        input
+          &:disabled
+            + .checkbox-text
+                color: #ddd
+                
+                &::before
+                  border-color: #ddd
+                &::after
+                  background: #ddd
+                  opacity: 1
+        &-text
+          padding-left: 25px
+          min-height: 14px
+          &::before
+            border-color: #9DCCFF
+          &::after
+            background: #317CCE
+    a
+      text-decoration: none
+      font-size: 15px
+      line-height: 1
+      font-weight: 400
+      margin-right: 5px
+      color: #7E7E7E // $main-dark
+      word-break: break-word
+      max-width: 145px
+
+.bookmarks
+  .bookmarks-list
+    display: flex
+    width: 100%
+    a
+      color: #fff
+      text-decoration: none
+      display: flex
+      align-items: center
+      justify-content: center
+      padding: 0 15px 0 15px
+      min-width: 153px
+      border-right: 3px solid #F4F9FF
+      background: #74A7DD
+      font-size: 15px
+      color: #F4F9FF
+      transition: all 0.3s ease
+      &:hover
+        background-color: $main
+
+.bookmark-btn
+  width: 84px
+  min-width: 84px
+  height: 100%
+  display: flex
+  align-items: center
+  justify-content: center
+  border-right: 3px solid #F4F9FF
+  background-color: $main
+  border-radius: 10px 0 0 10px
+  &:hover
+    cursor: pointer
+
+.footer-actions
+  margin-left: auto
+  display: flex
+  position: relative
+  &-item
+    background: #5893D4
+    &:not(:last-child)
+      border-right: 3px solid #fff
+      min-width: 66px
+      cursor: pointer
+    &:first-child
+      border-left: 3px solid #fff
+    &:last-child
+      border-radius: 0 10px 10px 0
+      overflow: hidden
+    .icon-wrapper
+      display: flex
+      align-items: center
+      justify-content: center
+      height: 100%
+    .calculator
+      position: absolute
+      right: 20px
+      bottom: 85px
+  .calendar
+    min-width: 66px
+    width: 66px
+    height: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+    background-color: $main
+    border-left: 3px solid #F4F9FF
+    position: relative
+
+  .lang-switch
+    display: flex
+    height: 100%
+    min-width: 167px
+    width: 167px
+    align-items: center
+    justify-content: center
+    background-color: $main
+    .lang-btn
+      width: 40px
+      height: 20px
+      background-color: transparent
+      border: 1px solid #E6F3FD
+      font-size: 12px
+      display: flex
+      align-items: center
+      justify-content: center
+      border-radius: 10px
+      margin: 0 7px
+      &:hover
+        cursor: pointer
+      &.active
+        background-color: #E6F3FD
+        color: #5893D4
+    &:hover
+      cursor: pointer
+
+.v-date-picker-title,.v-picker__title
+  display: none
+.v-picker__body.theme--light
+  width: 365px
+  border-radius: 10px
+  .theme--light.v-btn,.theme--light.v-date-picker-header .v-date-picker-header__value:not(.v-date-picker-header__value--disabled) button:not(:hover):not(:focus),.theme--light.v-date-picker-table th, .theme--light.v-date-picker-table .v-date-picker-table--date__week
+    color: #fff
+.v-picker.v-card.v-picker--date.theme--light
+  position: absolute
+  z-index: 10
+  bottom: 65px
+  right: 0px
+  min-width: 365px
+  border-radius: 10px
+.theme--light.v-picker__body
+  background-color: $main
+  padding-top: 10px

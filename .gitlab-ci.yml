@@ -1,0 +1,31 @@
+#Auto Deploy
+deploy_dev:
+  environment:
+    name: staging
+  when: manual
+  tags:
+    - all
+  only:
+    - dev
+  script:
+    - sudo apt-get update -qq && sudo apt-get install -y -qq sshpass
+    - sshpass -p hBky28EEh7J3h ssh -o StrictHostKeyChecking=no apricode@195.69.185.180
+    - cd /var/www/easysell
+    - git pull origin dev
+    - export COMPOSE_INTERACTIVE_NO_CLI=1
+    - docker-compose ps
+    - docker-compose exec -T gateway composer install
+    - docker-compose exec -T gateway composer dump-autoload
+    - docker-compose exec -T gateway php artisan l5-swagger:generate
+    - docker-compose exec -T gateway php artisan migrate --path=database/migrations/core
+    - docker-compose exec -T gateway php artisan database:company_migrations
+    - docker-compose exec -T gateway php artisan database:company_seeds edit
+    - docker-compose exec -T products composer install
+    - docker-compose exec -T crm composer install
+    - docker-compose exec -T admin composer install
+    - cd /var/www/easysell/spa
+    - sudo rm -R node_modules/
+    - cd /var/www/easysell
+    - docker-compose exec -T spa npm install
+    - docker-compose exec -T spa npm run build
+    - exit

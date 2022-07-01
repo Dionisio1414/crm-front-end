@@ -1,0 +1,4 @@
+id,title_ru,title_ua,is_sortable,is_visible,value
+1,ID,ID,1,1,id
+2,Область,Область,1,1,title
+3,Страна,Країна,1,1,country

@@ -1,0 +1,555 @@
+
+/*********** Placeholders ***********/
+
+\::-webkit-input-placeholder
+  color: #BBDBFE
+  font-size: 13px
+\::-moz-placeholder
+  color: #BBDBFE
+  font-size: 13px
+\:-ms-input-placeholder
+  color: #BBDBFE
+  font-size: 13px
+\:-moz-placeholder
+  color: #BBDBFE
+  font-size: 13px
+
+.v-text-field__details
+  display: none!important
+.v-dialog
+  border-radius: 10px !important
+
+.v-tooltip__content
+  background: #F4F9FF !important
+  color: $main !important
+  border: 1px solid #E3F0FF
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.05)
+  border-radius: 10px !important
+  font-size: 12px !important
+
+
+
+/************ Buttons *************/
+.hooper-track
+  padding-left: 0!important
+.v-btn--contained
+  box-shadow: none !important
+
+.page
+  .base-btn
+    background-color: $main-light !important
+    color: #fff
+    box-shadow: none
+    min-width: 160px
+    height: 40px !important
+    max-height: 50px
+    width: 100%
+    max-width: 160px
+    border-radius: 38px
+    font-size: 13px
+    text-transform: capitalize
+    font-weight: bold
+    letter-spacing: 0
+    margin: auto
+    transition: background-color 0.4s ease
+    &:hover
+      background-color: $main !important
+    svg
+      margin-right: 10px
+    &--transparent
+      background: transparent!important
+      border: 1px solid #9DCCFF
+      color: #9DCCFF
+      &::before
+        display: none
+      &:hover
+        background: #9DCCFF!important
+        color: #fff
+    &.shadow-btn
+      height: 45px !important
+      margin: auto 0 0 auto
+      box-shadow: 0 0 0 10px #E6F3FD!important
+    &.base-btn__big
+      max-width: 195px
+      height: 40px!important
+    &.darken-btn
+      background-color: $main !important
+      max-width: 100%
+      &:hover
+        background-color: $main-light !important
+.page
+  button.orange-btn
+    background-color: $orange !important
+    color: #fff
+    box-shadow: none
+    min-width: 160px
+    height: 40px !important
+    max-height: 50px
+    width: 100%
+    max-width: 160px
+    border-radius: 38px
+    font-size: 13px
+    text-transform: capitalize
+    font-weight: 500
+    transition: all 0.4s ease-in-out
+    letter-spacing: 0px
+    margin: auto
+    &:hover
+      background-color: #FF951A
+    svg
+      margin-right: 15px
+      vertical-align: middle
+      + span
+          vertical-align: middle
+          line-height: 1
+
+.v-btn__content
+  a
+    color: #fff !important
+    text-decoration: none
+
+.actions-buttons
+  margin-left: auto
+  display: flex
+  align-items: center
+  .sortable-btn
+    margin-left: auto
+  .circle-btn
+    transition: background-color 0.3s ease
+    box-shadow: none
+    &.v-btn.v-btn--disabled
+      background-color: red !important
+    &:focus
+      box-shadow: none !important
+    &:hover
+      background-color: #5893D4 !important
+
+.popup-buttons
+  .popup-btn
+    min-width: 190px !important
+    border-radius: 50px
+    font-size: 15px
+    text-transform: none
+    letter-spacing: normal
+    height: 40px !important
+    margin: 0 7px
+    &.transparent-btn
+      border: 1px solid $main
+
+
+.theme--light.v-btn.v-btn--disabled
+  color: #fff !important
+
+.theme--light.v-btn.v-btn--disabled:not(.v-btn--flat):not(.v-btn--text):not(.v-btn--outlined)
+  background: #BBDBFE !important
+
+.select-wrap
+    width: 100%
+
+.validation-rules
+  font-size: 15px
+  line-height: 1
+  padding: 0
+  color: #9DCCFF
+
+.item-form
+  &-title
+    font-size: 15px
+    font-weight: 700
+    text-transform: uppercase
+    color: #317CCE
+
+.item-name
+  position: relative
+  + .values-list
+      margin-top: 15px
+  .percent-icon
+    position: absolute
+    top: calc(50% - (-2px))
+    left: 60px
+    font-weight: 400
+    font-size: 14px
+    color: #9DCCFF
+    opacity: 0
+    transition: opacity .25s ease-in-out
+    &--active
+      opacity: 1
+
+  &_phone
+      align-items: flex-end
+      justify-content: space-between
+      .select-wrap
+          flex: 0 1 calc(25% - 5px)
+      .vue-tel-input
+          flex: 0 1 calc(85% - 5px)
+      input
+          flex: 0 1 calc(75% - 5px)
+      button
+          line-height: 1
+  &_actions
+      align-items: center
+      justify-content: space-between
+      input,
+      .select-wrap
+          flex: 0 1 91%
+
+.v-menu__content
+  &.select-companies
+    &-list
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05)
+      border-radius: 0px 0px 10px 10px
+      .v-list-item
+        &::before
+          display: none
+        &__title
+          font-size: 14px!important
+          font-weight: 400!important
+          line-height: 1!important
+          color: #7E7E7E!important
+        &:hover
+          background-color: #E3F0FF
+          .v-list-item__title
+            color: #317CCE!important
+        &--active
+          background-color: #E3F0FF
+          .v-list-item__title
+            color: #317CCE!important
+
+.select-companies
+  min-width: 100px
+  .v-input
+    &__slot
+      border-bottom: none!important
+    &__control
+      input
+        display: none
+      .v-label
+        font-size: 18px
+        font-weight: normal
+        line-height: 1
+        text-transform: uppercase
+        margin: 0
+        color: #5893D4!important
+      .v-select
+        &__selection
+          max-width: 100%
+          &--comma
+            @extend .v-label
+
+.v-menu__content.filtered-select-list
+  top: 134px!important
+  box-shadow: none!important
+  border-radius: 0 0 20px 20px!important
+  box-shadow: 0 4px 10px rgba(0, 0, 0, .05)!important
+  .v-select-list
+    padding: 0!important
+    .v-list-item
+      &--active
+        background: #5893D4
+        .v-list-item__title
+          color: #fff!important
+      &__content
+        padding: 15px 0
+      &__title
+        font-size: 13px!important
+        line-height: 1
+        font-weight: 500
+        color: #5893D4!important
+
+.footer-calendar
+  .v-picker
+    &__body
+      width: 100%!important
+      max-width: 364px
+      padding: 20px 30px 30px 30px!important
+  .v-date-picker-header
+    padding: 0
+    .v-date-picker-header__value
+      button
+        padding: 0
+  .v-date-picker-table
+    height: auto!important
+    padding: 0
+    table
+      border-collapse: collapse
+      thead
+        th
+          font-weight: 500
+          border-bottom: 1px solid #fff
+      tbody
+        td
+          .v-date-picker-table__current
+            background: #ffa726!important
+            border-color: #ffa726!important
+            color: #fff!important
+
+.welcomeWinPersonal__field
+  .select-switcher
+    .v-input__slot
+      border-radius: 10px!important
+      padding: 13px 15px 13px 20px!important
+
+.select-positions-list
+  border-radius: 10px!important
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1)!important
+  margin-top: 60px!important
+  max-height: 134px!important
+  overflow: hidden!important
+  .theme--light.v-list-item:not(.v-list-item--active):not(.v-list-item--disabled)
+    color: #F4F9FF !important
+  .v-list
+    overflow-x: hidden
+    overflow-y: auto
+    max-height: 134px!important
+    padding: 7px 0
+    &::-webkit-scrollbar
+        width: 2px
+    &::-webkit-scrollbar-track
+        background: transparent
+    &::-webkit-scrollbar-thumb
+        background: #9DCCFF
+    &-item
+      min-height: 0
+      padding: 0 20px
+      caret-color: #F4F9FF !important
+      &.primary--text
+        color: #F4F9FF !important
+      &::before
+        opacity: 0
+      &:hover
+        &::before
+          opacity: 1!important
+      &__content
+        position: relative
+        padding: 13px 0
+        .v-list-item__title
+          font-size: 18px!important
+          font-weight: 400!important
+          line-height: 1!important
+          color: #5893D4!important
+
+@keyframes moveUpDown
+  from
+    transform: translateY(-15px)
+  to
+    transform: translateY(0px)
+
+@keyframes blinkParticles
+  from
+    opacity: .15
+  to
+    opacity: 1
+
+@keyframes moveWaveFirst
+  from
+    transform: translateY(-15px)
+  to
+    transform: translateY(10px)
+
+@keyframes moveWaveSecond
+  from
+    transform: translateY(0px)
+  to
+    transform: translateY(20px)
+
+@keyframes fadeIn
+  0%
+    opacity: 0
+    transfrom: scale(.5)
+  100%
+    opacity: 1
+    transfrom: scale(1)
+
+.preloader-wrapper
+  display: flex
+  align-items: center
+  justify-content: center
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  width: 100%
+  height: 100%
+  opacity: 0
+  animation: fadeIn 3s ease-in-out 0s alternate both
+
+.preloader
+  position: absolute
+  top: 0
+  display: flex
+  align-items: center
+  justify-content: center
+  height: 100%
+  min-height: 100%
+  max-width: 300px
+  z-index: 999
+  &__icon
+    opacity: 0
+    will-change: transform
+    animation: moveUpDown 1.5s ease-in-out 1.5s infinite alternate both, fadeIn 3s ease-in-out 0s alternate both
+  &-logo
+    display: block
+    height: auto
+    max-width: 100%
+    object-fit: cover
+
+.anim
+  .svg-particles
+    position: relative
+    z-index: 2
+    will-change: opacity
+    animation: blinkParticles 1.5s ease-in-out 0s infinite alternate both
+  &.anim-1
+    .svg-wave
+      will-change: transform
+      animation: moveWaveFirst 1.5s ease-in-out 0s infinite alternate both
+  &.anim-2
+    .svg-wave
+      will-change: transform, opacity
+      animation: moveWaveSecond 1.5s ease-in-out 1.5s infinite alternate both, fadeIn 2s ease-in-out 1s alternate both
+
+.lang-switch.select-switcher
+  .v-input__slot
+    border-radius: 25px!important
+  .v-input__control
+    .v-select__selection--comma
+      padding-left: 20px!important
+    .v-input__append-inner
+      .v-input__icon--append
+        padding-right: 15px!important
+
+.select-switcher.v-input--is-disabled
+  opacity: .5
+
+.base-select
+  border: 1px solid #E3F0FF
+  border-radius: 0px 0px 10px 10px!important
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, .05)!important
+  margin-top: 35px!important
+  &::-webkit-scrollbar
+      width: 2px
+  &::-webkit-scrollbar-track
+      background: transparent
+  &::-webkit-scrollbar-thumb
+      background: #9DCCFF
+  .v-list
+    padding: 15px 0
+    &-item
+      padding: 0 20px
+      transition: background .25s ease-in-out
+      &--disabled
+        opacity: .5
+      &--active
+        background: #F4F9FF
+      &::before
+        display: none
+      &:hover
+        background: #F4F9FF
+      &__title
+        font-weight: 400!important
+
+.vue-tel-input
+  justify-content: space-between
+  border: none!important
+  &--invalid
+    input
+      border-color: #FF9F2F!important
+
+  input
+    padding: 0
+    flex: 0 1 calc(75% - 10px)!important
+    max-width: 75%
+    min-width: 108px
+  &:focus-within
+    box-shadow: none!important
+  .vti__dropdown
+    padding: 0
+    border-bottom: 1px solid #9DCCFF
+    flex: 0 1 calc(25% - 10px)
+    max-width: 25%
+    min-width: 50px
+    .vti__selection
+      .vti__country-code
+        margin-right: 5px
+    &.open
+      .vti__selection
+        .icon
+          transform: rotate(180deg)
+    &-list
+      width: auto
+      padding: 0
+      border: 1px solid #E3F0FF
+      border-radius: 0px 0px 10px 10px
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, .05)
+      &::-webkit-scrollbar
+          width: 2px
+      &::-webkit-scrollbar-track
+          background: transparent
+      &::-webkit-scrollbar-thumb
+          background: #9DCCFF
+      &.below
+        top: 25px
+    &-item
+      font-size: 14px
+      line-height: 1
+      padding: 5px 10px
+      strong
+        display: none
+    &.open
+      background: transparent!important
+    &:focus
+      outline: 0
+    &:hover
+      background: transparent
+
+.theme--light.v-skeleton-loader .v-skeleton-loader__avatar,
+.theme--light.v-skeleton-loader .v-skeleton-loader__button,
+.theme--light.v-skeleton-loader .v-skeleton-loader__chip,
+.theme--light.v-skeleton-loader .v-skeleton-loader__divider,
+.theme--light.v-skeleton-loader .v-skeleton-loader__heading,
+.theme--light.v-skeleton-loader .v-skeleton-loader__image,
+.theme--light.v-skeleton-loader .v-skeleton-loader__text
+  background: #E6F3FD!important
+
+.resend
+  &--disabled
+    pointer-events: none
+    opacity: .5
+
+.table-responsive
+  table
+    tr
+      &.is-not-active
+        span
+          &:not(.status-user):not(.user-icon)
+            opacity: .5
+.v-menu__content.defaultDropDown
+  &.resp
+    margin-top: 26px !important
+
+  .v-list-item
+    &:hover
+      background: #F4F9FF
+
+      .v-list-item__title
+        color: #317CCE !important
+
+    &:before
+      display: none !important
+
+  &.reason
+    margin-top: 25px !important
+
+.other-btn
+  background-color: #9DCCFF !important
+  border-radius: 100px
+  margin-left: 20px
+  width: 73px
+  height: 40px
+  padding: 0 15px
+  span
+    display: flex
+    align-items: center
+    justify-content: space-between
+    width: 100%

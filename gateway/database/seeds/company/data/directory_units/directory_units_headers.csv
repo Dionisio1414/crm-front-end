@@ -1,0 +1,5 @@
+id,title_ru,title_ua,is_sortable,is_visible,value
+1,Код,Код,1,1,code
+2,Краткое наименование,Коротка назва,1,1,title_short
+3,Полное наименование,Повне найменування,1,1,title_full
+4,Международное сокращение,Міжнародне скорочення,1,1,international

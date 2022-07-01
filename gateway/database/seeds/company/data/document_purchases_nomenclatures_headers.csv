@@ -1,0 +1,7 @@
+id,title_ru,title_ua,is_sortable,is_visible,value
+1,ID,ID,1,1,id
+2,Наименование,,1,1,title
+3,Количество,,1,1,unit
+4,Ед. измерения,,1,0,balance
+5,Цена,,1,0,price
+6,Сумма,,1,0,amount

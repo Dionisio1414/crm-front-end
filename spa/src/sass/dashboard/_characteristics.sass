@@ -1,0 +1,187 @@
+.page
+  .fixed-list
+    padding-left: 50px
+    li
+      color: #7E7E7E
+      border-bottom: 1px solid #E3F0FF
+      padding-left: 0
+    span:first-letter
+      text-transform: uppercase
+  .selection-bar
+    width: 100%
+    display: flex
+    margin-bottom: 20px
+    .select-value
+      display: flex
+      align-items: center
+      span
+        font-size: 14px
+        color: #9DCCFF
+        display: inline-block
+        margin-right: 10px
+      .select-style
+        margin-right: 10px
+      svg
+        cursor: pointer
+    .select-btn
+      width: 108px !important
+      height: 80px !important
+      background-color: transparent !important
+      border: 1px solid #BBDBFE
+      border-radius: 10px
+      font-size: 13px
+      color: #3282B8
+      text-transform: none
+      letter-spacing: 0
+      box-shadow: none
+      margin-right: 20px
+      padding: 20px
+      white-space: normal
+      &.btn-file
+        position: relative
+        order: -1
+        &:hover
+          cursor: pointer
+        input
+          position: absolute
+          left: 0
+          top: 0
+          width: 100%
+          height: 100%
+          opacity: 0
+      .text
+        display: inline-block
+        line-height: 15px
+        max-width: 85px
+        &:hover
+          cursor: pointer
+
+
+.vendor-code
+  .vendor-code-header
+    display: flex
+    width: 100%
+    align-items: center
+    label
+      padding-top: 2px
+    input
+      margin-bottom: 0
+  input[type=checkbox]
+    &:before
+      border-color: #7CE1A4
+    &:after
+      background-color: #7CE1A4
+
+.characteristic-page
+  &.edit-option
+    .item-area-col
+      padding: 0 25px
+
+  
+  .value-item.edit
+    .edit
+      margin-right: 8px
+      &:hover
+        cursor: pointer
+  .values-titles
+    display: flex
+    width: 100%
+    justify-content: space-between
+  .select-item
+    padding-top: 35%
+  .size-grid
+    width: 100%
+    display: flex
+    padding-top: 20px
+    .size-item.custom-size
+      min-width: 210px
+      max-width: 230px
+      margin-right: 0
+      .custom-size-content
+        display: flex
+        input
+          margin-right: 20px
+          color: $text
+        svg
+          min-width: 30px
+          &:hover
+            cursor: pointer
+    .size-item
+      min-width: 230px
+      max-width: 230px
+      width: 100%
+      margin-right: 40px
+      .size-item-title
+        font-size: 14px
+        color: $text
+        margin-bottom: 10px
+        padding-left: 5px
+      .size-item-content
+        width: 100%
+        background: #fff
+        border: 1px solid #E3F0FF
+        padding: 5px 0
+        border-radius: 10px
+        max-height: 220px
+      .check-all
+        min-height: 36px
+        label
+          font-weight: normal
+      input
+        margin-bottom: 0
+        &:before
+          border-color: #9DCCFF
+        &:after
+          background-color: #5893D4
+    .list-group
+      li
+        height: 36px
+        border-bottom: 1px solid #E3F0FF
+        label
+          color: $main
+          font-size: 12px
+          font-weight: normal
+          height: 100%
+          display: flex
+          align-items: center
+          &:hover
+            cursor: pointer
+        input[type=checkbox]
+          margin-bottom: 0
+          &:before
+            border-color: #9DCCFF
+          &:after
+            background-color: #5893D4
+  .values-list.value-list-color          
+    .value-item
+      min-height: 42px
+      max-width: 240px
+      .edit
+        min-width: 17px
+        margin-right: 8px
+        &:hover
+          cursor: pointer
+      .select-style
+        width: 36px
+        height: 26px
+        border-radius: 10px
+        overflow: hidden
+        background-position: center !important
+        background-size: cover !important
+
+.select-value
+  .select-style
+    width: 36px
+    height: 26px
+    border-radius: 10px
+    overflow: hidden
+    background-position: center !important
+    background-size: cover !important
+
+
+.v-input.v-color-picker__alpha.v-input--hide-details.v-input--is-label-active.v-input--is-dirty.theme--light.v-input__slider.v-color-picker__track
+  display: none !important
+
+.v-color-picker__preview:not(.v-color-picker__preview--hide-alpha) .v-color-picker__hue
+  margin-bottom: 0
+  //box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1)

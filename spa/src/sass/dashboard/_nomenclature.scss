@@ -1,0 +1,61 @@
+.min-price-warning {
+  background-color: #1a2226;
+  .dialog-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .change-min-price-form {
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    input {
+      margin-right: 10px;
+      padding: 10px;
+      outline: none !important;
+      text-align: center;
+      max-width: 106px;
+      font-size: 15px;
+      line-height: 15px;
+      color: #7E7E7E;
+      border: 1px solid #E3F0FF;
+      box-sizing: border-box;
+      border-radius: 100px;
+    }
+  }
+  .theme--dark.v-btn.v-btn--disabled:not(.v-btn--flat):not(.v-btn--text):not(.v-btn--outlined) {
+    background-color: rgb(88, 147, 212) !important;
+    border-color: rgb(88, 147, 212);
+    &:disabled {
+      opacity: .5;
+    }
+  }
+  .massage {
+    font-weight: normal;
+    margin-bottom: 10px;
+    font-size: 18px;
+    line-height: 130%;
+    text-align: center;
+    color: #5893D4;
+  }
+
+  .actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .link {
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 130%;
+    text-align: center;
+    text-decoration-line: underline;
+    color: #5893D4;
+
+    &:hover, &.active {
+      color: #FF9F2F;
+    }
+  }
+}

@@ -1,0 +1,128 @@
+.nomenclature-create-modal {
+  .characteristic-values-block {
+    max-width: 190px;
+    .search-block {
+      width: 100% !important;
+      border: 1px solid #9DCCFF;
+      border-radius: 50px;
+      input {
+        border: none;
+      }
+    }
+  }
+  input {
+    color: #7E7E7E;
+  }
+  background-color: #fff;
+  position: relative;
+  padding-bottom: 40px;
+  .dialog-main-body {
+    margin-right: -26px;
+    padding-right: 26px;
+  }
+
+  .dialog-content {
+    padding-bottom: 0;
+    padding-top: 30px;
+  }
+  .category-tree-item {
+    display: flex;
+  }
+
+  .v-treeview {
+    .v-treeview-node[aria-expanded=true]{
+      .category-item {
+        color: #5893D4;
+      }
+
+    }
+    .v-treeview-node[aria-expanded=false]{
+      .category-item {
+        color: #7E7E7E;
+      }
+
+    }
+    padding: 15px 45px;
+    .v-treeview-node__level {
+        display: none;
+    }
+    .v-treeview-node__children{
+      padding-left: 23px;
+      border-left: 1px solid #E3F0FF;
+    }
+    .v-treeview-node__root {
+      padding: 0 0 0 13px;
+      border-left: 1px solid #E3F0FF;
+      min-height: 32px;
+      &:hover {
+        background-color:  #E3F0FF;
+      }
+    }
+  }
+
+  .dialog-main {
+    .input-number-wrapper {
+      &.prices {
+        button {
+          display: flex;
+        }
+      }
+    }
+    padding-top: 0 !important;
+    .item.nested-category .open-drop-down {
+      padding: 4px;
+      position: absolute;
+      top: -10px;
+    }
+    .item-form {
+      .v-select.v-input--dense .v-select__selection--comma {
+        margin-top: 0;
+      }
+      .create-nested-category {
+        display: flex;
+        float: right;
+      }
+      .open-drop-down {
+        &:before {
+          display: none;
+        }
+      }
+      .v-ripple__container {
+        display: none!important;
+      }
+      .select-category-wrap {
+        font-size: 12px;
+        border-bottom: 1px solid #9DCCFF;
+        input {
+          border-bottom: 0;
+        }
+      }
+      .label-title {
+        margin-bottom: 12px;
+      }
+      input  {
+        padding-top: 0;
+        padding-bottom: 5px;
+      }
+    }
+    &-body {
+      height: 630px;
+    }
+
+    .dialog-content {
+      padding-bottom: 0;
+      padding-top: 0;
+    }
+
+  }
+
+  .dialog-footer {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.7) !important;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+  }
+}

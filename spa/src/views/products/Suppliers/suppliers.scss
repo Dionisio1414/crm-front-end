@@ -1,0 +1,76 @@
+.suppliers.page.with-tabs.with-small-nav .card.card-table {
+  width: 100% !important;
+  overflow-y: hidden;
+}
+
+.suppliersMenu {
+  overflow-y: auto;
+  position: relative;
+  padding-top: 0 !important;
+
+  &.loading:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255,255,255, .4);
+    z-index: 1;
+  }
+}
+
+.slide-fade-enter-active {
+  transition: all .5s ease;
+}
+
+.slide-fade-enter, .slide-fade-leave-to {
+  transform: translateX(-100%);
+}
+
+.tree-menu {
+  padding: 20px;
+}
+
+.suppliers.page.with-tabs {
+  .page-header .actions-section {
+    width: calc(100% - 260px);
+    justify-content: space-between;
+    margin-left: 20px;
+
+    .actions-buttons {
+      margin-left: inherit;
+
+      .v-btn {
+        margin-left: 10px;
+        width: inherit;
+        min-width: 156px;
+      }
+    }
+  }
+
+  .card-grid .card.list-item {
+    width: 100%;
+    max-width: 260px;
+  }
+
+  &.with-small-nav .card {
+    margin-left: 0;
+    overflow-y: inherit;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #7CE1A4;
+}

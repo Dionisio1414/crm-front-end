@@ -1,0 +1,143 @@
+.v-toolbar__content
+  height: 100% !important
+  > div
+    display: flex
+    width: 100%
+    height: 100%
+
+.navbar
+  &-wrapper
+    display: flex
+    justify-content: space-between
+    padding: 0 10px 0 0
+    &-home
+      margin-left: 245px
+    .dialog-wrap
+      position: absolute
+  &-tabs
+    flex: 0 1 calc(76% - 15px)
+    max-width: calc(76% - 15px)
+    .tabs-list
+      display: flex
+      align-items: center
+      height: 100%
+      &-item
+        $calcWidth: 245 / 1225 * 100%
+        display: flex
+        align-items: center 
+        justify-content: space-between
+        background: #5893D4
+        border-radius: 0 10px 10px 0
+        box-shadow: 2px 0px 3px rgba(45, 119, 202, 0.3)
+        height: 100%
+        padding: 0 15px
+        flex: 1 0 $calcWidth
+        max-width: 235px
+        &:not(:last-child)
+          margin-right: 4px
+        &--medium
+          max-width: 120px
+        &--small
+          max-width: 140px
+        .tab-text
+          font-size: 15px
+          font-weight: 400
+          line-height: 1
+          white-space: nowrap
+          margin-right: 30px
+          overflow: hidden
+          text-overflow: ellipsis
+          color: #fff
+          cursor: pointer
+  &-actions
+    display: flex
+    align-items: center
+    justify-content: space-between
+    > div
+        &:not(:last-child)
+          margin-right: 28px
+    .v-badge__badge
+      height: 21px
+      width: 21px
+      font-size: 13px
+      bottom: calc(100% - 7px) !important
+      left: calc(100% - 12px) !important
+    .messages
+      &:hover
+        cursor: pointer
+    .notifications
+      cursor: pointer
+      .v-badge__badge
+        height: 12px
+        width: 10px
+        min-width: 0
+        bottom: calc(100% - 6px) !important
+        left: calc(100% - 1px) !important
+
+
+.user
+  position: relative
+  width: 40px
+  height: 40px
+  top: -5px
+  &:hover
+    cursor: pointer
+  &-details
+    position: absolute
+
+.user-avatar
+  position: absolute
+  z-index: 2
+  right: 0
+  width: 40px
+  height: 40px
+  .avatar-wrap
+    width: 100%
+    height: 100%
+    // background-color: $main
+    overflow: hidden
+    border-radius: 50%
+    display: flex
+    align-items: center
+    justify-content: center
+    img
+      max-width: 100%
+    
+
+.avatar-icon
+  position: absolute
+  right: 0px
+  bottom: -2px
+  &.rotate
+    transform: rotate(180deg)
+
+
+.user-info
+  position: absolute
+  width: 292px
+  right: -25%
+  top: -12px
+  min-height: 0px
+  background-color: #fff
+  border-radius: 10px
+  padding: 15px
+  padding-bottom: 30px
+  color: $main
+  font-weight: bold
+  font-size: 14px
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2)
+  z-index: 1
+
+.user-actions
+  margin-bottom: 30px
+.user-action
+  margin-bottom: 10px
+.user-position
+  font-weight: normal
+.user-exit
+  font-weight: normal
+
+.user-info-header
+  padding-bottom: 18px
+  margin-bottom: 20px
+  border-bottom: 1px solid #E3F0FF

@@ -1,0 +1,32 @@
+@import "vars"
+@import "base"
+@import "layouts"
+@import "app/sidebar"
+@import "app/navbar"
+@import "app/footer"
+@import "dashboard/products"
+
+
+#app
+  font-family: 'HelveticaNeueCyr'
+  font-weight: normal
+
+.v-main
+  background-color: $main
+  padding-top: 85px !important
+
+.v-main__wrap
+  background-color: $bg1
+  border-radius: 20px 0 0 0
+
+.theme--light.v-app-bar.v-toolbar.v-sheet
+  background-color: $main
+  border: none
+
+.container.container--fluid
+  display: flex
+  flex-direction: column
+
+  
+
+@import "media" // Always at the end

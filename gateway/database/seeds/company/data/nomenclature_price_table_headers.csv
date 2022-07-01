@@ -1,0 +1,9 @@
+id,title_ru,title_ua,is_sortable,is_visible,order,value
+1,Дата,Дата,1,1,0,date
+2,Вид цены,Вид цены,1,1,0,title_price
+3,Назначение,Назначение,1,1,0,is_bay
+4,Валюта,Валюта,1,1,0,currency
+5,Поставщик,Поставщик,1,1,0,supplier
+7,Цена,Цена,1,1,0,price
+8,Ед.изм.,Ед.изм.,1,1,0,unit
+9,Тип цены,Тип цены,1,1,0,type_price

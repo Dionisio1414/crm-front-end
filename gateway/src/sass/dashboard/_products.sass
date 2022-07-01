@@ -1,0 +1,180 @@
+/* Sass component for products tables */
+
+.container--fluid
+  min-height: 100%
+  display: flex
+  padding: 20px
+
+.page
+  width: 100%
+  display: flex
+  align-items: stretch
+  flex-grow: 1
+  margin-bottom: 15px
+  .theme--light.v-data-table > .v-data-table__wrapper > table > tbody > tr:not(:last-child) > td:not(.v-data-table__mobile-row), .theme--light.v-data-table > .v-data-table__wrapper > table > tbody > tr:not(:last-child) > th:not(.v-data-table__mobile-row),
+  .theme--light.v-data-table > .v-data-table__wrapper > table > thead > tr:last-child > th
+    border-bottom: 1px solid #F4F9FF
+  .theme--light.v-data-table > .v-data-table__wrapper > table > tbody > tr:hover:not(.v-data-table__expanded__content):not(.v-data-table__empty-wrapper)
+    background: #F4F9FF
+  table
+    td
+      font-size: 14px
+      color: $text
+    th
+      font-size: 13px
+      color: #3282B8 !important
+      font-weight: normal !important
+
+.table-action
+  &:hover
+    cursor: pointer
+    
+.see-all
+  display: flex
+  width: 100%
+  justify-content: flex-end
+  text-align: right
+  margin-top: auto
+  margin-bottom: 20px
+  padding-right: 15px
+  a
+    text-decoration: none
+    font-size: 13px
+    color: #FF9F2F !important
+    display: flex
+    align-items: center
+    span
+      display: inline-block
+      margin-right: 4px
+
+.card-grid
+  width: 100%
+  display: flex
+  align-items: stretch
+  justify-content: space-between
+
+.card
+  display: flex
+  flex-direction: column
+  background: #ddd
+  min-width: 330px
+  border-radius: 10px
+  background-color: #fff
+  background: #F4F9FF
+  width: 20%
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.03)
+  margin-left: 20px
+  &:nth-child(1)
+    margin-left: 0
+  &:nth-child(2)
+    width: 38.5%
+  &:nth-child(3)
+    width: 38.5%
+  .card-content
+    background-color: #fff
+    width: 100%
+    height: 100%
+    border-radius: 10px
+    display: flex
+    flex-direction: column
+  .v-data-table.elevation-1.theme--light
+    box-shadow: none !important
+
+  .card-title
+    min-height: 50px
+    background: #F4F9FF
+    border-radius: 10px 10px 0 0
+    display: flex
+    align-items: center
+    padding-left: 22px
+    padding-right: 15px
+    .title
+      color: #3282B8
+      text-transform: uppercase
+      font-size: 13px !important
+      font-weight: bold
+
+.status.v-chip
+  border-radius: 5px !important
+  color: #05AB5B
+  .v-chip__content
+    color: #05AB5B !important
+    text-transform: uppercase
+    font-size: 10px
+
+.canceled.status.v-chip
+  border-radius: 5px !important
+  color: #05AB5B
+  .v-chip__content
+    color: #FF8080 !important
+    text-transform: uppercase
+    font-size: 10px
+
+
+/* Single product for products-to-buy table */
+
+.product-item
+  display: flex
+  padding: 15px
+  background: #F4F9FF
+  border-radius: 10px
+  border: 1px solid #E3F0FF
+  margin-bottom: 15px
+  color: $text
+  font-size: 15px
+
+.product-content
+  margin-right: 15px
+
+.product-number
+  margin-right: 10px
+
+.product-action
+  margin-left: auto
+  padding: 3px
+  position: relative
+  &:hover
+    cursor: pointer
+
+.product-id
+  color: $title
+  font-size: 12px
+  font-weight: normal
+
+
+/**************  Context menu  ***************/
+
+
+.context-menu
+  position: absolute
+  min-width: 153px
+  background: #F4F9FF
+  border: 1px solid #E3F0FF
+  box-sizing: border-box
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.05)
+  border-radius: 10px
+  padding: 10px
+  z-index: 10
+  //display: none
+  .context-menu-item
+    display: flex
+    align-items: center
+    color: #5893D4
+    font-size: 13px
+    margin-bottom: 10px
+    min-width: 140px
+    &:hover
+      font-weight: 550
+      .item-icon
+        background: #5893D4
+    &:last-child
+      margin-bottom: 0
+    .item-icon
+      margin-right: 10px
+      min-width: 25px
+      height: 25px
+      border-radius: 50%
+      background: #9DCCFF
+      display: flex
+      align-items: center
+      justify-content: center

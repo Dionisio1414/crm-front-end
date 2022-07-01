@@ -1,0 +1,6 @@
+id,title_ru,title_ua,is_sortable,is_visible,value
+1,Код,Код,1,1,code
+2,Отделение №,Відділення №,1,1,department_number
+3,Город/Населенный пункт,Місто/Населений пункт,1,1,city
+4,Улица,Вулиця,1,1,street
+5,Номер дома,Номер будинку,1,1,house_number

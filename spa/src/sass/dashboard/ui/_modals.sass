@@ -1,0 +1,271 @@
+.form
+    &-title
+        font-size: 15px
+        line-height: 1
+        text-transform: uppercase
+        font-weight: bold
+        margin-bottom: 10px
+        color: #317CCE
+    &-content
+        .row
+            margin: 0 -12px
+        &--singular
+            > .row
+                justify-content: center
+        .wrapper-fields
+            display: flex
+            align-items: flex-end
+            justify-content: space-between
+            flex-wrap: wrap
+            background: #F4F9FF
+            border-radius: 10px
+            padding: 20px
+            border: 1px solid transparent
+            transition: .25s ease-in-out
+            &:hover:not(.wrapper-fields--transparent)
+                background: #fff
+                box-shadow: 0 0 5px rgba(0, 0, 0, 0.05)
+                border-color: #E3F0FF
+            &--transparent
+                background: transparent
+                padding: 10px 0
+            &-item
+                flex: 0 1 calc(50% - 15px)
+                &:not(:nth-last-child(-n+2))
+                    margin-bottom: 20px
+                .select-wrap
+                    .v-input
+                        &__slot
+                            background: transparent!important
+        .vue-tel-input
+            &--invalid
+                .vti__input
+                    border-color: #FF9D2B
+            .vti__input
+                font-size: 14px
+                line-height: 1
+                border-bottom: 1px solid #BBDBFE
+                padding-bottom: 5px
+                color: #7E7E7E
+                width: 100%
+                transition: border-color .25s ease-out
+                &::placeholder
+                    font-size: 14px
+                    font-weight: normal
+                    line-height: 1
+                    color: rgba(#7E7E7E, .5)
+                &:focus
+                    border-color: #9DCCFF
+                    outline: 0
+        .slider-wrapper
+            display: flex
+            position: relative
+            padding-top: 15px
+            .v-slider
+                &--horizontal
+                    margin: 0
+                &__thumb
+                    transform: translateY(-50%) !important
+                    height: 13px
+                    width: 13px
+                    z-index: 1
+                    border: 2px solid  #E3F0FF!important
+                &__thumb-label
+                    background: none !important
+                    border: none !important
+                    color: #5893D4
+                    transform: translateX(-50%) !important
+                    font-size: 14px
+                    line-height: 14px
+                div
+                    transform: none
+            .slider-label
+                font-size: 14px
+                line-height: 14px
+                color: #7E7E7E
+                position: absolute
+                bottom: 48px
+                &__min
+                    left: 0
+                &__max
+                    right: 0
+        .select-switcher
+           &.v-input--is-disabled
+               .v-input__slot
+                   border-bottom: none
+        .checkbox
+            &-text
+                &::before
+                    border-color: #7CE1A4
+                &::after
+                    background: #4ECA80
+        .radio
+            &-text
+                &::before
+                    border-color: #7CE1A4
+                &::after
+                    background: #4ECA80
+        div[class^="col"]
+            padding: 0 12px
+        .label-title
+            display: inline-block
+            width: auto
+            &--singular
+                display: inline-flex
+                align-items: center
+                width: 100%
+                &::before
+                    display: none
+                + .form-field
+                    .form-field-helper
+                        right: 30px
+            .default-icon
+                margin-left: auto
+            &-text
+                position: relative
+                &::before
+                    content: "*"
+                    position: absolute
+                    right: -10px
+                    top: 0
+                    color: #9DCCFF
+        &-text
+            font-size: 18px
+            line-height: 1
+            text-align: center
+            color: #5893D4
+            strong
+                font-weight: 500
+                &:not(:last-child)
+                    text-transform: uppercase
+                &:last-child
+                    text-transform: capitalize
+            .subtext
+                display: block
+                font-size: 14px
+                line-height: 1
+                margin: 15px 0 0 0
+                color: #7E7E7E
+        .select-wrap
+            .v-input__slot
+                .v-label
+                    font-size: 14px
+                    opacity: .5
+                    color: #7e7e7e
+    .select-wrap
+        &--error
+           .v-input
+               &__slot
+                   border-color: #FF9D2B
+        .select-switcher
+            &.v-input--is-disabled
+                .v-input__append-inner
+                    display: none
+    &-field
+        position: relative
+        &-footer
+            display: flex
+            align-items: center
+            justify-content: space-between
+        &-percent
+            position: absolute
+            left: 43px
+            bottom: 0
+            font-size: 14px
+            font-weight: normal
+            line-height: 1
+            opacity: 0
+            color: #9DCCFF
+            transition: .25s ease-in-out
+            &.active
+                opacity: 1
+                bottom: 7px
+        &-link
+            display: inline-flex
+            align-items: center
+            font-size: 14px
+            font-weight: 500
+            line-height: 1
+            text-decoration: underline
+            color: #9DCCFF
+            .icon
+                margin-right: 10px
+        &-helper
+            position: absolute
+            top: -20px
+            right: 0
+            font-size: 12px
+            line-height: 1
+            font-weight: 500
+            color: #FF9D2B
+            &--default
+                position: static
+                font-size: 14px
+        &-button
+            position: absolute
+            right: 0
+        .base-calendar
+            top: auto
+        .field-label
+            font-size: 14px
+            line-height: 1
+            margin-left: 5px
+            color: #7E7E7E
+        .field
+            font-size: 14px
+            line-height: 1
+            border-bottom: 1px solid #BBDBFE
+            padding-bottom: 5px
+            color: #7E7E7E
+            width: 100%
+            transition: border-color .25s ease-out
+            &::placeholder
+                font-size: 14px
+                font-weight: normal
+                line-height: 1
+                color: rgba(#7E7E7E, .5)
+            &:focus
+                outline: 0
+                &:not(.field-error)
+                    border-color: #9DCCFF
+            &:disabled
+                border: none
+                opacity: .5
+            &:read-only
+                border: none
+            &-error
+                border-color: #FF9D2B
+            &-number
+                font-size: 14px
+                line-height: 1
+                border: 1px solid #9DCCFF
+                border-radius: 5px
+                width: 70px
+                height: 24px
+                text-align: center
+                color: #7E7E7E
+                &:focus
+                    border-color: #9DCCFF
+                    outline: 0
+            + .form-field-footer
+                margin-top: 20px
+    &-actions
+        padding-top: 55px
+        text-align: center
+        .base-button
+            min-width: 193px
+            &:not(:last-child)
+                margin-right: 30px
+    .label-title
+        margin-bottom: 0
+    .select-wrap
+        .select-switcher
+            .v-input
+                &__control
+                    min-height: 0!important
+    .validation-rules
+        margin-top: 30px
+
+
+
+

@@ -1,0 +1,8 @@
+id,title_ru,title_ua,is_sortable,is_visible,value
+1,Код,Код,1,1,code
+2,Краткое наименование,Коротка назва,1,1,title_short
+3,Полное наименование,Повне найменування,1,1,title_full
+4,Cокращение,Cкорочення,1,1,abbreviation
+5,Столица,Столиця,1,1,capital
+6,Тел. код,Тел. код,1,1,phone_code
+7,Часовой пояс,Часовий пояс,1,1,timezone

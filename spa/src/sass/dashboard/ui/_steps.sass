@@ -1,0 +1,1027 @@
+/* Styles for steps */
+
+@keyframes firstBlinkLoader
+  from
+    opacity: .1
+  to
+    opacity: .3
+
+@keyframes secondBlinkLoader
+  from
+    opacity: .3
+  to
+    opacity: .5
+
+@keyframes thirdBlinkLoader
+  from
+    opacity: .5
+  to
+    opacity: .8
+
+// @keyframes name
+//   0%
+//     opacity:
+//   100%
+
+// @keyframes name
+//   0%
+
+//   100%
+
+.welcomeWinWrap
+  display: flex
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  background: rgba(0, 0, 0, 0.25)
+  z-index: 7
+  justify-content: center
+  align-items: center
+
+.welcomeWin
+  position: relative
+  background: rgba(235, 247, 255, 0.5)
+  padding: 40px 0 66px 0
+  box-sizing: border-box
+  border-radius: 30px
+  font-size: 16px
+  border: 1px solid #E3F0FF
+  width: 100%
+  min-height: 875px
+  display: flex
+  flex-direction: column
+  &::before
+    content: ""
+    display: block
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    backdrop-filter: blur(5px)
+    border-radius: 30px
+    z-index: -2
+  &::after
+    content: ""
+    display: block
+    background-image: url("./assets/img/welc_win_bg1.svg")
+    background-size: contain
+    height: 219px
+    position: absolute
+    bottom: 20px
+    left: 40px
+    right: 40px
+  &__banner
+    position: absolute
+    bottom: 27px
+    left: -67px
+    z-index: 1
+  &--init
+    display: flex
+    align-items: center
+    justify-content: center
+    &::after
+      background-image: none
+    .welcomeWin-caption
+      font-size: 30px
+      font-weight: 700
+      margin-bottom: 20px
+      color: #fff
+    .welcomeWin-slider
+      overflow: hidden
+      margin-bottom: 30px
+      &-wrapper
+        position: relative
+        // &::before
+        //   content: ""
+        //   position: absolute
+        //   bottom: 0
+        //   left: 0
+        //   right: 0
+        //   height: 100%
+        //   width: 100%
+        //   background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%)
+        //   pointer-events: none
+        //   opacity: .5
+        //   z-index: 2
+      .hooper
+        &:focus
+          outline: 0
+        &-track
+          list-style-type: none
+          &:focus
+            outline: none
+        &-list
+          &:focus
+            outline: none
+          .hooper-slide
+            display: flex
+            align-items: center
+            justify-content: center
+            position: relative
+            font-size: 12px
+            font-weight: 400
+            text-align: center
+            opacity: .5
+            color: #fff
+            &:not(.is-next)
+              background: linear-gradient(to top, #FFFFFF 0%, #FFFFFF 100%)
+              -webkit-background-clip: text
+              -webkit-text-fill-color: transparent
+            &.is-next
+              font-size: 16px
+              font-weight: 500
+              opacity: 1
+              color: #fff
+    .welcomeWin-loader
+      display: flex
+      align-items: center
+      justify-content: center
+      &-item
+        background: #fff
+        width: 20px
+        height: 20px
+        // animation: firstBlinkLoader 1.2s infinite ease-in-out
+        &:not(:last-child)
+          margin-right: 15px
+        &:first-child
+          animation: firstBlinkLoader 1s infinite 0s ease-in-out alternate
+          // animation-delay: 0s
+          // opacity: .3
+        &:nth-child(2)
+          animation: secondBlinkLoader 1s infinite .4s ease-in-out alternate
+          // animation-delay: .4s
+          // opacity: .5
+        &:last-child
+          animation: thirdBlinkLoader 1s infinite .8s ease-in-out alternate
+          // animation-delay: .8s
+          // opacity: .8
+  &--sales
+    .welcomeWinLive
+      &__item
+        height: 100%
+        justify-content: center
+        margin-bottom: 0
+  &--users
+    min-height: 678px
+    .welcomeWinPersonal
+      display: flex
+      flex: 1
+      margin-top: 0
+      .wrapper
+        display: flex
+        flex: 1
+        flex-direction: column
+
+  // &--customerCount
+  //   display: none
+  // &--automatization
+  //   display: none
+  // &--integration
+  //   display: none
+  // &--chooseRate
+  //   display: none
+  // &--choosePaymentMethod
+  //   display: none
+  button
+    outline: none
+
+.welcomeWinTopText
+  padding: 0 70px 50px 70px
+  color: #fff
+  position: relative
+  &::before
+    content: ""
+    display: block
+    background-image: url('./assets/img/welc_win_bg2.svg')
+    background-size: contain
+    height: 40px
+    position: absolute
+    top: 5px
+    left: 41%
+    width: 100%
+  &__title
+    font-size: 30px
+    font-weight: 500
+    letter-spacing: 0.5px
+    line-height: 33px
+    padding-right: 20px
+  &__subtitle
+    max-width: 70%
+    margin-top: 10px
+    line-height: 21px
+    font-weight: 300
+    letter-spacing: 0.5px
+    &--bold
+      font-weight: 500
+    &--chooseRate
+      max-width: 100%
+    &--selectedRate
+      // display: none
+  &--chooseRate
+    display: flex
+    justify-content: flex-start
+    align-items: flex-end
+    padding: 0 70px
+  &__relatedRate
+    font-weight: 500
+  &--personal
+    padding: 0 65px 50px 65px
+    .welcomeWinTopText__title
+      padding-right: 0
+  &--users
+    text-align: center
+    padding-bottom: 30px
+    .welcomeWinTopText
+      &__title,
+      &__subtitle
+        margin: 0
+        padding: 0
+      &__subtitle
+        max-width: 100%
+      &__title
+        margin-bottom: 10px
+
+.welcomeWinLive
+  max-height: 222px
+  overflow-y: auto
+  position: relative
+  opacity: 0
+  transition: opacity .25s ease-in-out
+  &--active
+    opacity: 1
+  &--shadowTop
+    position: relative
+    box-shadow: 0 -30px 15px -15px #99aec2
+    &::before
+      content: ''
+      display: block
+      position: sticky
+      top: 0
+      left: 0
+      right: 0
+      width: 100%
+      height: 50px
+      //background: linear-gradient(to bottom, #97b3cf 40%, rgb(151 179 207 / 82%) 40%, transparent)
+      background: linear-gradient(to bottom, #99aec2, transparent)
+      margin-bottom: -30px
+  &__item
+    display: flex
+    flex-direction: column
+    margin-bottom: 20px
+    &:last-child
+      .welcomeWinLive__ask
+        margin-bottom: 0
+  &__ask
+    color: #7E7E7E
+    align-self: flex-start
+    padding: 13px 30px 13px 70px
+    background: #E3F0FF
+    box-shadow: 0px 0px 9.23077px rgba(0, 0, 0, 0.1)
+    border-radius: 0 15px 15px 0
+    margin-bottom: 20px
+    font-weight: 500
+  &__ans
+    color: #fff
+    align-self: flex-end
+    padding: 13px 70px 13px 30px
+    background: #5893D4
+    box-shadow: 0px 0px 9.23077px rgba(0, 0, 0, 0.1)
+    border-radius: 15px 0 0 15px
+  &::-webkit-scrollbar
+    width: 3px
+    height: 3px
+    background: rgba(0,0,0,0)
+  &::-webkit-scrollbar-thumb
+    background: #fff
+
+.welcomeWinBottom
+  padding-top: 10px
+  position: relative
+  z-index: 1
+  margin-top: auto
+  &--createPass
+    margin-top: 409px
+    .welcomeWinNav
+      padding-right: 0
+  &--personal
+    margin-top: 162px
+    .welcomeWinNav
+      padding-right: 0
+
+.welcomeWinPick
+  display: flex
+  flex-wrap: wrap
+  justify-content: flex-end
+  align-items: center
+  padding-right: 52.5px
+  padding: 0 46px 0 55px
+  margin-top: 88px
+  margin-bottom: 30px
+  box-sizing: content-box
+  max-height: 236px
+  overflow: auto
+  &::-webkit-scrollbar
+    width: 3px
+    height: 3px
+    background: rgba(0,0,0,0)
+  &::-webkit-scrollbar-thumb
+    background: #fff
+  &--sales
+    justify-content: flex-start
+    padding-left: 118px
+  &--integration
+    max-width: 55%
+    margin-left: auto
+  &--automatization
+    justify-content: flex-start
+  &__item
+    margin: 7.5px
+    input
+      display: none
+      &:checked + label
+        background: #E3F0FF
+  &__label
+    display: block
+    color: #317CCE
+    background: #fff
+    padding: 10px 15px
+    border-radius: 15px
+    transition: all .2s
+    cursor: pointer
+    &:hover
+      background: #E3F0FF
+  &__shortName
+    font-weight: 500
+
+.welcomeWinNav
+  padding: 0px 50px 0 70px
+  display: flex
+  justify-content: flex-end
+  position: relative
+  z-index: 1
+  letter-spacing: 0.5px
+  margin-top: auto
+  &--choosePaymentMethod
+    padding: 124px 70px 0 124px
+  &--chooseRate
+    padding: 29px 70px 0 124px
+  &__prev
+    color: #fff
+    position: relative
+    margin-right: 40px
+    padding-left: 20px
+    font-weight: 300
+    &::before
+      content: ""
+      display: block
+      width: 9px
+      height: 9px
+      border-right: 3px solid #fff
+      border-bottom: 3px solid #fff
+      box-sizing: border-box
+      position: absolute
+      top: 50%
+      left: 0
+      transform: translateY(-50%) rotate(135deg)
+    &:hover
+      text-decoration: underline
+  &__next
+    position: relative
+    font-size: 0
+    width: 139px
+    height: 48px
+    background: #FF9F2F
+    border-radius: 32px
+    transition: all .2s
+    &:hover
+      background: #ff8900
+    &::before
+      content: ""
+      display: block
+      width: 15px
+      height: 15px
+      border-right: 4px solid #fff
+      border-bottom: 4px solid #fff
+      box-sizing: border-box
+      position: absolute
+      top: 50%
+      left: 47%
+      transform: translate(-50%, -50%) rotate(-45deg)
+    &--payment
+      width: 250px
+      font-size: 16px
+      color: #fff
+      font-weight: 500
+      height: unset
+      padding: 16px 0
+      line-height: 16px
+      letter-spacing: 0.5px
+      &::before
+        display: none
+    &--disabled
+      background: #FFCF97
+      cursor: no-drop
+      &:hover
+        background: #FFCF97
+  &__link
+    font-weight: 500
+    color: #fff !important
+    margin-right: auto
+    max-width: 245px
+    letter-spacing: 0.5px
+    &:hover, &--noUnd
+      text-decoration: none
+    &--noUnd
+      &:hover
+        text-decoration: underline
+
+.welcomeWinPaymentMethods
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  align-items: center
+  position: relative
+  z-index: 1
+  color: #fff
+  font-weight: bold
+  padding: 0 60px
+  max-height: 370px
+  overflow: auto
+  &::-webkit-scrollbar
+    width: 3px
+    height: 3px
+    background: rgba(0,0,0,0)
+  &::-webkit-scrollbar-thumb
+    background: #fff
+  &__itemWrap
+    margin: 0 20px 30px 0
+    &:nth-child(4n+4), &:last-child
+      margin-right: 0
+    input
+      display: none
+      &:checked + label
+        background: rgba(235, 247, 255, 0.8)
+        color: #9FB8D1
+        img
+          filter: invert(36%) sepia(4%) saturate(2862%) hue-rotate(182deg) brightness(85%) contrast(93%) opacity(0.5)
+  &__item
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    background: rgba(235, 247, 255, 0.5)
+    border: 1px solid #E3F0FF
+    box-sizing: border-box
+    backdrop-filter: blur(20px)
+    border-radius: 20px
+    width: 180px
+    height: 100px
+    transition: all .2s
+    cursor: pointer
+    &.disabled
+      opacity: .5
+      pointer-events: none
+    img
+      transition: all .2s
+    &:hover
+      background: rgba(235, 247, 255, 0.8)
+      color: #9FB8D1
+      img
+        filter: invert(36%) sepia(4%) saturate(2862%) hue-rotate(182deg) brightness(85%) contrast(93%) opacity(0.5)
+    span
+      display: inline-block
+      margin-top: 10px
+
+.welcomeWinPrint
+  text-align: center
+  position: relative
+  z-index: 1
+  &__toPrint
+    display: inline-block
+    color: #E3F0FF!important
+    text-decoration: none
+    font-weight: 300
+    position: relative
+    padding-left: 30px
+    line-height: 21px
+    &:hover
+      text-decoration: underline
+    &::before
+      content: ''
+      background-image: url('./assets/img/print.svg')
+      background-size: contain
+      width: 20px
+      height: 20px
+      position: absolute
+      top: 0
+      left: 0
+
+.welcomeWinRates
+  display: flex
+  padding: 65px 70px 10px 60px
+  position: relative
+  z-index: 1
+  overflow-x: auto
+  overflow-y: hidden
+  &::before
+    content: ''
+    display: block
+    position: absolute
+    left: 0
+    top: 0
+    bottom: -30px
+    //background: linear-gradient(to right, #97b3cf 30%, #97b3cf9c, transparent)
+    z-index: 1
+    width: 230px
+    pointer-events: none
+  &__rate
+    flex: 0 0 calc(33.333% - 15px)
+    background: #fff
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1)
+    border-radius: 10px
+    padding: 36px 15px 55px
+    text-align: center
+    margin: 0 15px
+    position: relative
+    cursor: pointer
+    &:nth-child(3)
+      margin-right: 25px
+    &--related
+      .welcomeWinRates__header--related
+        opacity: 1
+        pointer-events: auto
+    &--selected
+      .welcomeWinRates__header--selected
+        opacity: 1
+        pointer-events: auto
+  &__header
+    position: absolute
+    top: -51px
+    left: -15px
+    right: -15px
+    height: 170px
+    font-size: 20px
+    line-height: 18px
+    color: #fff
+    border-radius: 10px
+    z-index: -2
+    padding-top: 17px
+    text-shadow: 0 0.2px 1px #c7c7c7
+    letter-spacing: 0.5px
+    transition: all .2s
+    &--related
+      background: #CFEBFF
+      opacity: 0
+      pointer-events: none
+    &--selected
+      background: #5893D4
+      z-index: -1
+      opacity: 0
+      pointer-events: none
+  &__name
+    font-size: 22px
+    font-weight: 700
+    color: #2564D3
+    letter-spacing: 0.2px
+    margin-bottom: 27px
+    max-height: 30px
+    overflow: hidden
+    text-overflow: ellipsis
+    white-space: nowrap
+  &__price
+    padding: 31px 0 35px 0
+    position: relative
+    &::before
+      content: ''
+      position: absolute
+      top: 0
+      left: 50%
+      transform: translateX(-50%)
+      width: 91px
+      height: 3px
+      background: #FFA14A
+  &__cost
+    font-size: 34px
+    color: #75C5FF
+    font-weight: 700
+    line-height: 34px
+    margin-top: 8px
+  &__currency
+    color: #2564D3
+    font-weight: bold
+  &__includes
+    max-height: 160px
+    overflow: auto
+    &::-webkit-scrollbar
+      width: 3px
+      height: 3px
+      background: rgba(0,0,0,0)
+    &::-webkit-scrollbar-thumb
+      background: #bdbdbd
+    ul
+      list-style: none
+      font-size: 15px
+      color: #4F4F4F
+      padding: 0
+      li
+        margin-bottom: 15px
+        &:last-child
+          margin-bottom: 0
+
+.welcomeWinCreatePass
+  position: relative
+  z-index: 1
+  padding: 0 70px
+  &Row
+    display: flex
+    justify-content: flex-start
+    align-items: flex-start
+    margin-bottom: 20px
+    &__enter
+      position: relative
+      input
+        width: 441px
+    &__toggle
+      width: 18px
+      height: 16px
+      position: absolute
+      bottom: 20px
+      right: 20px
+      background-size: contain
+      z-index: 1
+      &--open
+        background-image: url('././assets/icons/eye-open.svg')
+      &--close
+        background-image: url('././assets/icons/eye-close.svg')
+    &__desc
+      margin-top: 40px
+      margin-left: auto
+      padding: 15px 10px 11px 0
+      background: #c6d6e7
+      border-radius: 10px
+      width: 300px
+      min-height: 50px
+      position: relative
+      opacity: 0
+      transition: .25s ease-in-out
+      &.focused
+        opacity: 1
+      &::before
+        content: ''
+        border: 7px solid transparent
+        border-left: 17px solid #c6d6e7
+        transform: rotate(180deg)
+        position: absolute
+        left: -24px
+        top: 15px
+    &__title
+      font-size: 16px
+      color: #fff
+      padding-left: 30px
+      margin-bottom: 10px
+      font-weight: 500
+    &__str
+      font-size: 14px
+      color: #7E7E7E
+      font-weight: 300
+      margin-bottom: 10px
+      padding-left: 30px
+      &--complete
+        color: #01A744
+        font-weight: 500
+        position: relative
+        white-space: nowrap
+        &::before
+          content: ''
+          position: absolute
+          left: 10px
+          top: 2px
+          width: 11px
+          height: 13px
+          background-image: url('././assets/img/gal.svg')
+          background-size: contain
+      &:last-child
+        margin-bottom: 0
+      &--repeatYes, &--repeatNo
+        font-size: 16px
+        font-weight: 500
+        color: #01A744
+        margin-bottom: 0
+      &--repeatNo
+        color: #7E7E7E
+      &--disable
+        display: none
+    &--repeat
+      margin-top: -45px
+
+.formLabel
+  display: block
+  font-size: 16px
+  font-weight: 300
+  color: #fff
+  height: 25px
+  overflow: hidden
+  margin-bottom: 15px
+  &Disabled
+    opacity: .5
+.formInput
+  background: #F4F9FF
+  border-radius: 10px
+  color: #5893D4 //#9DCCFF
+  padding: 16px 20px 12px 20px
+  width: 330px
+  border: 1px solid transparent
+  font-size: 20px
+  max-height: 50px
+  position: relative
+  line-height: 1
+  &::placeholder
+    color: #9DCCFF
+  &:focus
+    outline: none
+    border: 1px solid #5893D4
+    color: #5893D4
+    &::-webkit-input-placeholder
+      opacity: 0
+    &::-moz-placeholder
+      opacity: 0
+    &:-moz-placeholder
+      opacity: 0
+    &:-ms-input-placeholder
+      opacity: 0
+
+  &::-webkit-input-placeholder
+    color:#9DCCFF
+    font-size: 18px
+    line-height: 1
+    transition: opacity .2s
+  &::-moz-placeholder
+    color:#9DCCFF
+    font-size: 18px
+    line-height: 1
+    transition: opacity .2s
+  &:-moz-placeholder
+    color:#9DCCFF
+    font-size: 18px
+    line-height: 1
+    transition: opacity .2s
+  &:-ms-input-placeholder
+    color:#9DCCFF
+    font-size: 18px
+    line-height: 1
+    transition: opacity .2s
+  &::-webkit-inner-spin-button
+    -webkit-appearance: none
+input[type=number]
+  -moz-appearance: textfield
+
+.welcomeWinPersonal
+  padding: 0 70px 0 135px
+  margin-top: auto
+  position: relative
+  z-index: 1
+
+  &__row
+    display: flex
+    justify-content: space-between
+    padding-bottom: 30px
+    &--self
+      input
+        width: 220px
+  &__field
+    position: relative
+    .password-popup
+      background: rgba(244, 249, 255, .5)
+      position: absolute
+      top: 105px
+      left: 0
+      right: 0
+      width: 100%
+      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.05)
+      border-radius: 10px
+      padding: 15px 25px 15px 40px
+      opacity: 0
+      transition: .25s ease-in-out
+      &::before
+        content: ''
+        position: absolute
+        left: 50%
+        top: -14px
+        background-image: url('././assets/icons/triangle-popup.svg')
+        // border: 10px solid transparent
+        // border-left: 17px solid #c6d6e7
+        transform: translateX(-50%)
+        width: 25px
+        height: 14px
+      &--open
+        opacity: 1
+      &__title
+        line-height: 1
+        font-weight: bold
+        margin-bottom: 10px
+        color: #fff
+      &__list
+        .list-item
+          position: relative
+          font-size: 14px
+          line-height: 1
+          color: #7E7E7E
+          &:not(:last-child)
+            margin-bottom: 10px
+          &--success
+            font-weight: 500
+            color: #01A744
+            &::before
+              content: ''
+              background-image: url('././assets/img/gal.svg')
+              background-size: contain
+              position: absolute
+              left: -20px
+              top: 50%
+              transform: translateY(-50%)
+              width: 11px
+              height: 13px
+          &--complete
+            font-size: 16px
+            font-weight: 500
+            color: #01A744
+    .select-switcher
+      .v-label
+        font-size: 14px!important
+    .v-text-field.v-text-field--solo .v-input__control input
+      display: none
+    .v-text-field
+      padding-top: 0
+      margin-top: 0
+    .v-input__append-inner
+      position: relative
+      z-index: 3
+    .v-input__slot
+        background: #F4F9FF
+        border-radius: 10px!important
+        padding: 13px 15px 13px 20px!important
+        max-height: 50px
+        margin: 0
+        &::before,
+        &::after
+          display: none
+        .v-select__selections
+          input
+            display: none
+        .v-select__slot
+          .v-label
+            font-size: 18px
+            line-height: 1
+            margin: 0
+            color: #9DCCFF
+            &--active
+              // display: none
+              max-width: 100%
+              transform: none
+            &::after
+              display: none
+          .v-select__selection--comma
+            position: relative
+            background: #F4F9FF
+            font-size: 18px
+            line-height: 25px
+            margin: 0
+            color: #9DCCFF
+            width: 100%
+    .theme--light.v-text-field--solo > .v-input__control > .v-text-field__details
+      display: none
+    label
+      margin-bottom: 10px
+      pointer-events: none
+    input, select
+      padding: 13px 35px 13px 20px
+      transition: all .4s
+      // &:focus + .welcomeWinPersonal__subtext
+      //   opacity: 0
+    input
+      &:focus
+        z-index: 1
+    select
+      padding-right: 70px
+
+    &::after
+      content: ''
+      position: absolute
+      right: 15px
+      bottom: 17px
+      width: 16px
+      height: 16px
+      background-size: contain
+      opacity: 0
+      transition: opacity .4s
+
+    &--valid, &--invalid
+      &::after
+        opacity: 1
+      // .welcomeWinPersonal__subtext
+      //   display: none
+    &--valid
+      input, select
+        border-color: #4ECA80
+      &::after
+        background-image: url('././assets/img/gal.svg')
+
+    &--invalid
+      input, select
+        border-color: #FF9F2F
+      &::after
+        background-image: url('././assets/img/invalid.svg')
+
+    &--required
+      > label
+          &::after
+            content: ' *'
+            display: inline-block
+            padding-left: 5px
+      > .welcomeWinPersonal__field
+          label
+            &::after
+              content: ' *'
+              display: inline-block
+              padding-left: 5px
+    &--disabled
+      pointer-events: none
+      opacity: .5
+
+    &--select
+      &::before
+        content: ''
+        position: absolute
+        right: 15px
+        bottom: 20px
+        width: 8px
+        height: 8px
+        border-bottom: 2px solid #9DCCFF
+        border-left: 2px solid #9DCCFF
+        z-index: 1
+        transform: rotate(-45deg)
+      &::after
+        right: 51px
+
+  &__subtext
+    position: absolute
+    right: 15px
+    bottom: 10px
+    font-size: 20px
+    color: #c3c3c3
+    transition: all .4s
+    z-index: 2
+    background: #f4f9ff
+
+.dialog-steps
+  overflow-y: visible!important
+  box-shadow: none!important
+
+.select-switcher
+  .v-input__slot
+    margin: 0!important
+  &.welcomeWinPersonal__field--valid
+    .v-input__control
+      position: relative
+      &::after
+        content: ''
+        position: absolute
+        right: 45px
+        top: 50%
+        width: 16px
+        height: 16px
+        transform: translateY(-50%)
+        background-image: url('././assets/img/gal.svg')
+        background-size: contain
+    .v-input__slot
+      border: 1px solid #4ECA80
+      .v-select__selection--comma
+        color: #5893D4
+
+
+@-moz-document url-prefix()
+  .welcomeWin
+    &::before
+      background: rgba(94, 130, 174, 0.72)
+  .welcomeWinRates
+    &::before
+      //background: linear-gradient(to right, #a0bad4 30%, #a0bad49c, transparent)
+  .welcomeWinLive
+    scrollbar-color: #fff rgba(0,0,0,0)
+    scrollbar-width: thin
+    &--shadowTop
+      box-shadow: 0 -30px 15px -15px #a0b7d0
+      &::before
+        background: linear-gradient(to bottom, #a0b7d0, transparent)
+  .mainInnerSidebar, .mainInnerBanners__banner
+    background: rgba(94, 130, 174, 0.72)
+  .myScroll
+    scrollbar-color: #fff rgba(0,0,0,0)
+    scrollbar-width: thin
+    &--blue
+      scrollbar-color: #5893D4 rgba(0,0,0,0)
+    &--notificates
+      scrollbar-color: #9DCCFF rgba(0,0,0,0)

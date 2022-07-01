@@ -1,0 +1,184 @@
+<?php
+
+namespace App\Services\Shemas\Leads;
+
+/**
+ * @OA\Schema(
+ *     title="LeadParams",
+ *     description="LeadParams Shemas",
+ *     @OA\Xml(
+ *         name="LeadParams"
+ *     )
+ * )
+ * @OA\Property(
+ *     property="title",
+ *     title="title",
+ *     example="Title",
+ *     type="string"
+ * )
+ * @OA\Property(
+ *     property="title_middle_name",
+ *     title="title_middle_name",
+ *     example="Middle Name",
+ *     type="string"
+ * )
+ * @OA\Property(
+ *     property="title_last_name",
+ *     title="title_last_name",
+ *     example="Last Name",
+ *     type="string"
+ * )
+ * @OA\Property(
+ *     property="title_first_name",
+ *     title="title_first_name",
+ *     example="First Name",
+ *     type="string"
+ * )
+ * @OA\Property(
+ *     property="partner_type_id",
+ *     title="partner_type_id",
+ *     example=1,
+ *     type="int"
+ * )
+ * @OA\Property(
+ *     property="date_of_birth",
+ *     title="date_of_birth",
+ *     example="2020-12-01",
+ *     type="string"
+ * )
+ * @OA\Property(
+ *     property="date",
+ *     title="date",
+ *     example="2020-12-01",
+ *     type="string"
+ * )
+ * @OA\Property(
+ *     property="sex_id",
+ *     title="sex_id",
+ *     example=1,
+ *     type="int"
+ * )
+ * @OA\Property(
+ *     property="currency_id",
+ *     title="currency_id",
+ *     example=1,
+ *     type="int"
+ * )
+ * @OA\Property(
+ *     property="phone",
+ *     title="phone",
+ *     example="+380501111111",
+ *     type="string"
+ * )
+ * @OA\Property(
+ *     property="email",
+ *     title="email",
+ *     example="test@example.com",
+ *     type="string"
+ * )
+ * @OA\Property(
+ *     property="partner_inn",
+ *     title="partner_inn",
+ *     example=312312312,
+ *     type="int"
+ * )
+ * @OA\Property(
+ *     property="partner_edrpou",
+ *     title="partner_edrpou",
+ *     example="43232423",
+ *     type="string"
+ * )
+ * @OA\Property(
+ *     property="manager_id",
+ *     title="manager_id",
+ *     example=1,
+ *     type="int"
+ * )
+ * @OA\Property(
+ *     property="price_id",
+ *     title="price_id",
+ *     example=1,
+ *     type="int"
+ * )
+ * @OA\Property(
+ *     property="form_payment_id",
+ *     title="form_payment_id",
+ *     example=1,
+ *     type="int"
+ * )
+ * @OA\Property(
+ *     property="terms_payment_id",
+ *     title="terms_payment_id",
+ *     example=1,
+ *     type="int"
+ * )
+ * @OA\Property(
+ *     property="comments",
+ *     title="comments",
+ *     example="test test",
+ *     type="string"
+ * )
+ * @OA\Property(
+ *     property="loyalty",
+ *     title="loyalty",
+ *     example=5,
+ *     type="int"
+ * )
+ * @OA\Property(
+ *     property="discount",
+ *     title="discount",
+ *     example=10,
+ *     type="int"
+ * )
+ * @OA\Property(
+ *     property="organization_id",
+ *     title="organization_id",
+ *     example=1,
+ *     type="int"
+ * )
+ * @OA\Property(
+ *     property="source_attraction_id",
+ *     title="source_attraction_id",
+ *     example=1,
+ *     type="int"
+ * )
+ *@OA\Property(
+ *     property="lead_status_id",
+ *     title="lead_status_id",
+ *     example=1,
+ *     type="int"
+ * )
+ * @OA\Property(
+ *     property="nomenclatures",
+ *     title="Nomenclatures",
+ *     type="array",
+ *     collectionFormat="multi",
+ *     @OA\Items(
+ *       ref="#/components/schemas/LeadNomenclatures"
+ *     )
+ * )
+ * @OA\Property(
+ *     property="delivery",
+ *     title="Delivery",
+ *       ref="#/components/schemas/LeadDelivery"
+ * )
+ * @OA\Property(
+ *     property="categories",
+ *     title="Categories",
+ *     type="array",
+ *     collectionFormat="multi",
+ *     @OA\Items(
+ *          @OA\Property(
+ *              property="id",
+ *              title="id",
+ *              example=1,
+ *              type="int"
+ *          )
+ *     )
+ * )
+ */
+
+class LeadParams
+{
+
+}

@@ -1,0 +1,4 @@
+id,title_ru,title_ua,is_sortable,is_visible,is_edit,order,value
+1,Артикул,Артикул,1,1,0,0,sku
+2,Наименование,Наименование,1,1,0,0,title
+3,Мин.цена,Мин.цена,1,1,0,0,min_price

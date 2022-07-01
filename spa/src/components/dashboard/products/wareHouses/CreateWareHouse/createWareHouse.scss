@@ -1,0 +1,105 @@
+.createWareHousesBody {
+  .popup-buttons {
+    margin-top: 40px;
+  }
+
+  .error-on-select {
+    border-bottom: 1px solid #FF9F2F !important;
+  }
+
+  .addBtn {
+    border: 1px solid #5893D4;
+    box-sizing: border-box;
+    border-radius: 32.5652px;
+    width: 100%;
+    max-width: 160px;
+    height: 36px;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    margin-top: 20px;
+    background: #5893D4;
+
+    &[disabled] {
+      border: 1px solid #9DCCFF;
+      background: #fff;
+      color: #9DCCFF;
+    }
+  }
+
+  .select .label-title {
+    margin-bottom: 0 !important;
+  }
+
+  .item-form {
+    margin-top: 20px;
+    min-height: inherit;
+  }
+
+  .dialog-content .item-form .item-name .label-title {
+    margin-bottom: 15px;
+  }
+
+  .v-menu__content.theme--light.v-menu__content--fixed.menuable__content__active {
+    margin-top: 0;
+  }
+
+  .label-title {
+    margin-bottom: 0;
+  }
+
+  .popup-btn:disabled {
+    border: 1px solid #9DCCFF;
+    box-sizing: border-box;
+    border-radius: 32.5652px;
+    color: #9DCCFF !important;
+  }
+
+  .popup-btn.save {
+    transition: background-color .2s ease;
+
+    &:hover {
+      background-color: #FF9F2F !important;
+    }
+
+    &:before {
+      display: none !important;
+    }
+  }
+
+  .field {
+    line-height: 1.5;
+  }
+
+  .theme--light.v-text-field > .v-input__control > .v-input__slot:before {
+    border-color: #9DCCFF;
+  }
+
+  .theme--light.v-text-field:not(.v-input--has-state):hover > .v-input__control > .v-input__slot:before {
+    border-color: #9DCCFF;
+  }
+
+  .foreignCompany {
+    .text {
+      font-size: 15px;
+      line-height: 15px;
+      color: #7E7E7E;
+      margin: 5px 0 0 15px;
+    }
+  }
+
+  .physicalAddressDescription {
+    color: rgba(126, 126, 126, .5);
+    font-size: 13px;
+    line-height: 130%;
+  }
+}
+
+.v-autocomplete__content {
+  margin-top: 0 !important;
+}

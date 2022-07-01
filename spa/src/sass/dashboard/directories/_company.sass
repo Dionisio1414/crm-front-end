@@ -1,0 +1,453 @@
+.page
+    &-company
+        &.with-tabs
+            .page-header
+                justify-content: flex-start
+                &-caption
+                    flex: 0 1 calc(17.5% - 20px)
+                    margin-right: 15px
+                    .page-title
+                        width: auto
+                &-actions
+                    flex: 0 1 calc(30% - 20px)
+                    justify-content: flex-end
+                    .orange-btn
+                        margin-left: 0
+                        margin-right: 15px
+    .companies-detail
+        display: flex
+        flex-direction: column
+        height: 100%
+        .item-name
+            input
+                color: #7E7E7E
+        .close-details
+            padding: 0 40px
+            width: 100%
+            margin-bottom: 30px
+        .values-list
+            margin-bottom: 0
+            flex-direction: column
+            .value-item
+                margin-right: 0
+        .organization-accordion
+            .item-form
+                display: none
+                &--active
+                    display: block
+        .organization-accordion,
+        .companies-content
+            margin-bottom: auto
+            overflow-x: hidden
+            overflow-y: auto
+            padding: 0 40px
+            height: 100%
+            &::-webkit-scrollbar
+                width: 2px
+            &::-webkit-scrollbar-track
+                background: transparent
+            &::-webkit-scrollbar-thumb
+                background: #9DCCFF
+            &-item
+                &:not(:last-child)
+                    margin-bottom: 20px
+                .toggler
+                    display: flex
+                    align-items: center
+                    width: 100%
+                    text-align: left
+                    &:hover
+                        .toggler-text
+                            color: #FF9F2F
+                    &--active
+                        .toggler-text
+                            color: #FF9F2F
+                        .toggler-arrow
+                            transform: rotate(180deg)
+                    &-text
+                        font-size: 13px
+                        line-height: 1
+                        font-weight: 700
+                        text-transform: uppercase
+                        white-space: nowrap
+                        color: #9DCCFF
+                        transition: .25s ease-in-out
+                    &-line
+                        background:#E3F0FF
+                        width: 100%
+                        height: 1px
+                        margin: 0 10px
+                    &-arrow
+                        line-height: 1
+                        transition: .25s ease-in-out
+                .item-form
+                    padding: 10px 0 0 0
+                    .values-list 
+                        .value-item
+                            max-width: fit-content
+                            span
+                                max-width: 100%
+                    .form-actions
+                        text-align: right
+                    .row
+                        align-items: flex-end
+                    .checkbox
+                        margin-right: 15px
+                        &-text
+                            &::before
+                                border-color: #7CE1A4 
+                            &::after
+                                background: #4ECA80
+                    .validation-rules
+                        font-size: 15px
+                        line-height: 1
+                        color: #9DCCFF
+                    .item-name
+                        margin: 0
+                        .label-title
+                            line-height: 1
+                            margin-bottom: 5px
+                    .select-switcher
+                        .v-input__control
+                            min-height: 32px
+                        .v-input__slot
+                            padding: 0
+                            border-radius: 0
+                        .v-label
+                            font-size: 14px
+                            font-weight: normal
+                            line-height: 1
+                            text-transform: capitalize
+                            color: #7E7E7E
+        .organizations-buttons
+            display: flex
+            align-items: center
+            text-align: right
+            padding: 0 40px
+            margin-top: 30px
+    .companies-skeleton-loader
+        overflow-x: hidden
+        overflow-y: auto
+        height: calc(100% - 48px)
+        &::-webkit-scrollbar
+            width: 2px
+        &::-webkit-scrollbar-track
+            background: transparent
+        &::-webkit-scrollbar-thumb
+            background: #9DCCFF
+    .companies-list
+        padding: 5px 0
+        margin: 0
+        list-style-type: none
+        &-item
+            position: relative
+            display: flex
+            align-items: center
+            padding: 0 20px
+            width: 100%
+            cursor: pointer
+            transition: .25s ease-in-out
+            &:not(:last-child)
+                margin-bottom: 10px
+            &:hover
+                background: #F4F9FF
+                .sort-buttons
+                    opacity: 1
+            &--active
+                background: #F4F9FF
+            .list-title
+                position: relative
+                padding: 14px 0
+                line-height: 1
+                flex: 1
+                &::before
+                   content: ""
+                   position: absolute
+                   bottom: -5px
+                   left: 0
+                   width: 100%
+                   height: 1px
+                   background:#E3F0FF
+                .title
+                    font-size: 15px!important
+                    line-height: 1
+                    font-weight: 500
+                    text-transform: capitalize
+                    color: #7E7E7E
+                .code
+                    font-size: 14px
+                    line-height: 1
+                    font-weight: 300
+                    margin-left: 10px
+                    color: #7E7E7E
+            .checkbox
+                line-height: 1
+                margin-right: 15px
+                margin-top: 3px
+                &-text
+                    &::before
+                        border-color: #7CE1A4 
+                    &::after
+                        background: #4ECA80
+            .favorite
+                display: inline-block
+                line-height: 1
+                margin-right: 15px
+                height: 17px
+                cursor: pointer
+                svg
+                    path
+                        stroke: #E0E0E0
+                        transition: .25s ease-in-out
+                &-active
+                    svg
+                        path
+                            fill: #FFE923
+                            stroke: #FFE923
+            .sort-buttons
+                position: absolute
+                display: flex
+                align-items: center
+                transition: opacity .25s ease-in-out
+            
+.page-company
+    .form-actions 
+        padding: 0
+        .base-button
+            padding: 0
+            height: 36px!important
+            min-width: 160px
+    &.with-tabs
+        .card-grid 
+            .card
+                margin-left: 0
+                &:first-child
+                    flex: 0 1 calc(18% - 20px)
+                    width: auto
+                &:nth-child(2)
+                    flex: 0 1 calc(32% - 20px)
+                    width: auto
+                &:last-child
+                    flex: 0 1 calc(50% - 20px)
+                    width: auto
+                    padding: 30px 0
+                    overflow: hidden
+    &.with-small-nav
+        .card-grid 
+            .card
+                margin-left: 0
+                &:first-child
+                    flex: 0
+                    width: 0
+                &:nth-child(2)
+                    flex: calc(50% - 20px)
+                    margin: 0 15px
+                &:last-child
+                    flex: calc(50% - 20px)
+                    margin: 0 15px
+            
+.base-calendar
+    background-color: transparent!important
+    bottom: auto!important
+    top: 57px
+    .v-picker__body
+        background: #fff
+        border-radius: 10px
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05)
+        margin-right: 0!important
+        .v-date-picker-header
+            .accent--text
+                color: #5893D4!important
+                button
+                    color: currentColor!important
+            .v-btn
+                color: #9DCCFF
+        .v-date-picker-table
+            height: auto
+            padding-bottom: 20px
+            table
+                border-collapse: collapse
+                thead
+                    th
+                        font-size: 13px
+                        font-weight: 500!important
+                        padding: 12px
+                        line-height: 1
+                        padding: 12px
+                        border-bottom: 1px solid #F4F9FF
+                        color: #9DCCFF!important
+                tbody
+                    td
+                        .v-btn
+                            font-size: 13px
+                            font-weight: 600
+                            line-height: 1
+                            color: #5893D4
+                            &::before
+                                background-color: transparent
+                                opacity: 0
+                            &.accent,
+                            &.v-date-picker-table__current
+                                background: #FF9D2B!important
+                                box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.15)
+                                font-weight: bold
+                                border: none!important
+                                color: #fff!important
+                            &:hover
+                                font-weight: bold
+                                color: #fff
+                                &::before
+                                    background-color: #FF9D2B
+                                    opacity: 1
+
+.employes-list
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    margin: 0 -5px
+    > div
+        flex: 0 1 calc(45% - 15px)
+        margin-bottom: 20px
+        margin: 0 5px 20px 5px
+    .employe-add
+        margin-bottom: 20px
+
+.employe-add
+    position: relative
+    border: 1px solid #E3F0FF
+    border-radius: 10px
+    max-width: 118px
+    cursor: pointer
+    .text
+        font-size: 13px
+        line-height: 16px
+        text-align: center
+        padding: 12px
+        color: #9DCCFF
+        &-disabled
+            opacity: .5
+    .employes-popup
+        display: none
+        position: absolute
+        top: 70px
+        left: 0
+        background: #fff
+        border: 1px solid #E3F0FF
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1)
+        border-radius: 10px
+        padding: 20px 30px
+        min-width: 350px
+        max-height: 300px
+        overflow-x: hidden
+        overflow-y: auto
+        transform: scale(0)
+        transition: transform .25s ease-in-out
+        &--active
+            display: block
+            transform: scale(1)
+        &-item
+            &:not(:last-child)
+                margin-bottom: 15px
+        &::-webkit-scrollbar
+            width: 2px
+        &::-webkit-scrollbar-track
+            background: transparent
+        &::-webkit-scrollbar-thumb
+            background: #9DCCFF
+        .employe
+            &-information
+               .fullname,
+               .position
+                   white-space: normal 
+.employe
+    background: #E3F0FF
+    display: inline-flex
+    align-items: center
+    border-radius: 10px
+    padding: 10px 15px
+    line-height: 1
+    &-status
+        margin-right: 15px
+        line-height: 1
+        cursor: pointer
+        &--main
+            .icon
+                path
+                    fill: #5893D4
+                    stroke: #5893D4
+        .icon
+            path
+                stroke: #BBDBFE
+        .checkbox
+            &-text
+                &::before
+                    border-color: #9DCCFF
+                &::after
+                    background: #5893D4
+    &-picture
+        border: 1px solid #9DCCFF
+        border-radius: 50%
+        width: 40px
+        height: 40px
+        overflow: hidden
+        margin-right: 15px
+        .picture
+            display: block
+            width: 100%
+            max-width: 100%
+            height: 100%
+            min-width: 40px
+            min-height: 40px
+            object-fit: cover
+        .icon
+            width: 100%
+            height: 100%
+    &-information
+        margin-right: 15px
+        .fullname,
+        .position
+            font-size: 15px
+            line-height: 1
+            white-space: nowrap
+            color: #317CCE
+        .fullname
+            font-weight: 500
+            margin-bottom: 5px
+        .positon
+            font-weight: 400
+    &-actions
+        margin-left: auto
+
+.settings-select
+    max-width: 73px
+    .v-input__slot
+        background-color: #9DCCFF!important
+        border-radius: 100px!important
+        border: none
+
+.filtered-select
+    max-width: 233px
+    .v-select
+        &--is-menu-active
+            .v-input__slot
+                border-radius: 20px 20px 0px 0px!important
+                border-bottom: 1px solid #9DCCFF 
+    .v-input__slot
+        border-radius: 20px!important
+        border: none
+        padding: 0 20px!important
+        .v-select__selection--comma
+            font-size: 13px
+            line-height: 1
+            font-weight: bold
+            color: #5893D4!important
+        .v-label
+            top: auto!important
+            line-height: 1
+            height: auto
+            font-size: 13px
+            line-height: 1
+            font-weight: bold
+            color: #5893D4!important
+            
+

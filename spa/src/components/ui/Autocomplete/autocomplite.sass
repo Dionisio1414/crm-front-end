@@ -1,0 +1,175 @@
+.autocomplete
+  margin: 0
+
+  &-dropdown
+    border: 1px solid #E3F0FF
+    border-radius: 0 0 10px 10px !important
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .05) !important
+    margin-top: 0 !important
+    max-height: 150px !important
+
+    &::-webkit-scrollbar
+      width: 2px
+
+    &::-webkit-scrollbar-track
+      background: transparent
+
+    &::-webkit-scrollbar-thumb
+      background: #9DCCFF
+
+    .v-list
+      padding: 10px 0
+
+      &:hover
+        background: #fff !important
+
+      &-item
+        padding: 0 20px
+        transition: background .25s ease-in-out
+
+      &--disabled
+        opacity: .5
+
+      &--active
+        background: #F4F9FF
+
+      &::before
+        display: none
+
+      &:hover
+        background: #F4F9FF
+
+      &__title
+        font-weight: 400 !important
+
+    &--repeater
+      &.active-popup
+        min-height: 215px
+
+        .v-list
+          min-height: 215px
+
+      .v-list
+        padding-top: 0
+
+        &-popup
+          background: #fff
+          position: absolute
+          top: 45px
+          left: 50%
+          right: 0
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.15)
+          width: calc(100% - 15px)
+          transform: translateX(-50%)
+          border-radius: 10px
+          z-index: 2
+
+          .form
+            padding: 30px 20px
+
+            &-actions
+              padding-top: 15px
+
+        &-button
+          background: #F4F9FF
+          line-height: 1
+          text-align: left
+          padding: 10px 15px
+          box-shadow: 0 3px 5px rgba(0, 0, 0, 0.05)
+          width: 100%
+
+        .icon
+          margin-right: 9px
+
+          path
+            fill: red !important
+
+        .text
+          font-size: 15px
+          line-height: 1
+          color: #5893D4
+
+  &.v-input--is-disabled
+    opacity: .5
+
+    .v-input__control
+      .v-select__slot
+        input
+          border-bottom: none
+
+      .v-input__append-inner
+        border-bottom: none
+
+  &.v-input--is-readonly
+    .v-input__control
+      .v-select__slot
+        input
+          border-bottom: none
+          padding-top: 5px
+          color: #7E7E7E
+
+      .v-input__append-inner
+        display: none
+
+  &.theme--light
+    &.v-text-field
+      >
+      .v-input__control
+        >
+        .v-input__slot
+          &::before
+            display: none
+
+          &::after
+            display: none
+
+  .v-input
+    &__append-outer
+      position: absolute
+      top: 65px
+      left: 15px
+      margin-left: 0 !important
+      z-index: 205
+
+      .v-list
+        &-popup
+          background: #fff
+          border-radius: 10px
+          padding: 30px 20px 20px 20px
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.15)
+          width: 300px
+
+          .form
+            &-field
+              margin-bottom: 20px
+
+            &-actions
+              text-align: center
+              padding-top: 0
+
+            .base-button
+              min-width: 160px
+
+    &--dense
+      >
+      .v-input__control
+        >
+        .v-input__slot
+          margin: 0
+
+    &__control
+            .v-select
+              &__slot
+                input
+                  font-size: 14px
+                  line-height: 1
+                  border-bottom: 1px solid #BBDBFE
+                  padding-bottom: 5px
+                  padding-top: 0
+                  color: #7E7E7E
+
+    &__append-inner
+      border-bottom: 1px solid #BBDBFE
+
+    &__icon
+      height: 26px

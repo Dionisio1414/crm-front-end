@@ -1,0 +1,1 @@
+export const TYPE_OF_WAREHOUSE = [{title: 'Оптовый', id: 1}, {title: 'Розничный', id: 2}];

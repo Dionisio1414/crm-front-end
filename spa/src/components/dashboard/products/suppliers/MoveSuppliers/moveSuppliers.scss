@@ -1,0 +1,112 @@
+@import "src/sass/mixins";
+
+.iconMove {
+  margin-right: 10px;
+}
+
+.header-text{
+  line-height: 1;
+}
+
+.popup-btn:disabled {
+  border: 1px solid #9DCCFF;
+  box-sizing: border-box;
+  border-radius: 32.5652px;
+  color: #9DCCFF !important;
+}
+
+.pathway {
+  margin-bottom: 20px;
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    padding-left: 0;
+    li {
+      font-size: 16px;
+      line-height: 16px;
+      color: #5893D4;
+      margin-right: 10px;
+      position: relative;
+
+      &:after {
+        content: '›';
+        margin-left: 10px;
+      }
+
+      &:last-child {
+        padding-right: 0;
+        font-weight: 500;
+
+        &:after {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.dialog-actions {
+  display: flex;
+  justify-content: center;
+}
+
+.moveWareHouse {
+  .body {
+    width: 100%;
+    padding: 30px 60px;
+
+    .bodyTitle {
+      text-align: center;
+      margin-bottom: 10px;
+
+      strong {
+        border-bottom: 1px solid #317CCE;
+      }
+    }
+  }
+
+  .treeGroups {
+    border: 1px solid #E3F0FF;
+    box-sizing: border-box;
+    border-radius: 10px;
+    max-height: 350px;
+    min-height: 350px;
+    overflow-y: auto;
+    @include custom-scroll-bar();
+  }
+
+  .breadcrumb {
+    margin: 10px 0;
+    text-align: center;
+
+    &Wr {
+      span {
+        font-size: 16px;
+        line-height: 16px;
+        color: #317CCE;
+      }
+
+      span.caret {
+        font-size: 24px;
+        font-weight: normal;
+        vertical-align: middle;
+        display: inline-block;
+        margin: 0 5px;
+        color: #317CCE;
+      }
+    }
+
+    &Title {
+      font-weight: bold;
+      font-size: 13px;
+      line-height: 13px;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color: #317CCE;
+      margin-bottom: 15px;
+      display: block;
+    }
+  }
+}

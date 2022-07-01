@@ -1,0 +1,8 @@
+id,title_ru,title_ua,is_sortable,is_visible,value
+1,ID,ID,1,1,id
+2,Контрагент,Контрагент,1,1,counterparty
+3,Долг,Борг,1,1,debt
+4,Поставщик,Постачальник,1,1,is_supplier
+5,Покупатель,Покупець,1,1,is_customer
+6,Прочее,Iнше,1,1,is_other
+7,Контактные данные,Контактні дані,1,1,contact_detail

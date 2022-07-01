@@ -1,0 +1,9 @@
+id,title_ru,title_ua,is_sortable,is_visible,value
+1,ID,ID,1,1,code
+2,Наименование,Назва,1,1,title
+3,Наименование в прайс-листе,Найменування в прайс-листі,1,1,title_price_list
+4,Валюта,Валюта,1,1,currency
+5,Тип цены,Тип ціни,1,1,type_price
+6,"Наценка, %","Націнка, %",1,1,margin_percent
+7,Назначение,Призначення,1,1,is_buy
+8,Расчет Наценки,Розрахунок Націнки,1,0,calculate_margin_percent
